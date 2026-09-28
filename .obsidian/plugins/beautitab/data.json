@@ -1,0 +1,26 @@
+{
+  "backgroundTheme": "custom",
+  "customBackground": "https://raw.githubusercontent.com/XBEAST1/Hyprland-Dotfiles/refs/heads/master/.config/hyde/themes/Misty/wallpapers/6.Cold%20Lonely%20Road-Grey.jpg",
+  "localBackgrounds": [],
+  "showTopLeftSearchButton": false,
+  "topLeftSearchProvider": {
+    "command": "switcher:open",
+    "display": "Obsidian Core Quick Switcher"
+  },
+  "showTime": true,
+  "timeFormat": "12-hour",
+  "showGreeting": true,
+  "greetingText": "Hello, XBEAST",
+  "showInlineSearch": true,
+  "inlineSearchProvider": {
+    "command": "switcher:open",
+    "display": "Obsidian Core Quick Switcher"
+  },
+  "showRecentFiles": true,
+  "showBookmarks": false,
+  "bookmarkSource": "all",
+  "bookmarkGroup": "",
+  "showQuote": true,
+  "quoteSource": "Quoteable",
+  "customQuotes": []
+}

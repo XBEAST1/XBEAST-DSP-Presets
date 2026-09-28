@@ -1,0 +1,222 @@
+{
+  "main": {
+    "id": "492386798c506ec8",
+    "type": "split",
+    "children": [
+      {
+        "id": "77a1a9d8ef2cb889",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fd73e37e4a975fc1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "FabFilter/Pro-Q/GUIDE.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "GUIDE"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "496ade20e3c9f7cc",
+    "type": "split",
+    "children": [
+      {
+        "id": "2156fca861b4b357",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "909bf9314df2a8c3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "5c7412a5d4b25ead",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "57f9767142c6a0c1",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 251.5
+  },
+  "right": {
+    "id": "6a94df51df6e3631",
+    "type": "split",
+    "children": [
+      {
+        "id": "b3924b6d4dae5f45",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b0e2ccb0974a629f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "3.Frameworks/Next JS/Google Analytics/Google Analytics.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Google Analytics"
+            }
+          },
+          {
+            "id": "4d5d741e884cc92a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Welcome.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Welcome"
+            }
+          },
+          {
+            "id": "06ca57ba388de6ec",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "b19b710fd602062f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Languages/Javascript/Untitled.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Untitled"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "fd73e37e4a975fc1",
+  "lastOpenFiles": [
+    "FabFilter/Pro-L/GUIDE.md",
+    "FabFilter/Pro-R2/GUIDE.md",
+    "FabFilter/Pro-L/presets/XBEAST.ffp",
+    "FabFilter/Pro-Q/presets/Headphones/XBEAST - Punchy Bass.ffp",
+    "FabFilter/Pro-Q/presets/Headphones/XBEAST - Heavy Bass.ffp",
+    "FabFilter/Pro-Q/presets/Headphones/XBEAST - Balanced.ffp",
+    "FabFilter/Pro-Q/presets/Headphones/XBEAST - Extreme Sub-Bass.ffp",
+    "FabFilter/Pro-Q/presets/Headphones",
+    "FabFilter/Pro-Q/presets/IEMS/XBEAST - Balanced.ffp",
+    "FabFilter/Pro-Q/presets/IEMS/XBEAST - Punchy Bass.ffp",
+    "FabFilter/Pro-Q/presets/IEMS/XBEAST - Heavy Bass.ffp",
+    "FabFilter/Pro-Q/presets/IEMS/XBEAST - Extreme Sub-Bass.ffp",
+    "FabFilter/Pro-Q/GUIDE.md",
+    "FabFilter/Pro-Q/screenshots/01-enable-dynamics-menu.png",
+    "FabFilter/Pro-Q/screenshots/02-dynamic-band-controls.png",
+    "FabFilter/Pro-Q/screenshots/CleanShot 2026-09-28 at 23.58.27@2x.png",
+    "FabFilter/Pro-Q/screenshots/CleanShot 2026-09-28 at 23.58.12@2x.png",
+    "FabFilter/Pro-Q/screenshots/CleanShot 2026-09-28 at 23.58.33@2x.png",
+    "README.md",
+    "FabFilter/Pro-Q/screenshots/01-xbeast-v2.png",
+    "FabFilter/Pro-Q/screenshots/02-xbeast-v2-light-bass.png",
+    "FabFilter/Pro-Q/screenshots/03-xbeast-v2-bass.png",
+    "FabFilter/Pro-L/screenshots/01-pro-l2-interface-and-limiting-behavior.png",
+    "FabFilter/Pro-R2/screenshots/10-cathedral-dual-hill-evolution.png",
+    "My Setup/Agentic Skills And Rules/Global Rules/GEMINI.md",
+    "My Setup/Agentic Skills And Rules/GEMINI.md",
+    "My Setup/Agentic Skills And Rules/Global Rules/AGENTS.md",
+    "My Setup/Agentic Skills And Rules/AGENTS GLOBAL RULES.md",
+    "My Setup/Agentic Skills And Rules/AGENTS.md",
+    "My Setup/Agentic Skills/skills_playbook.md",
+    "My Setup/Agentic Skills And Rules/skills/spec-generator/references/spec-template.md",
+    "My Setup/Agentic Skills And Rules/skills/senior-frontend/references/typescript-expert.md",
+    "My Setup/Agentic Skills And Rules/skills/senior-frontend/references/tailwind-patterns.md",
+    "My Setup/Agentic Skills And Rules/skills/senior-frontend/references/state-management.md",
+    "My Setup/Agentic Skills And Rules/skills/senior-frontend/references/seo-audit.md",
+    "My Setup/Agentic Skills And Rules/skills/senior-frontend/references/scroll-experience.md",
+    "My Setup/Agentic Skills And Rules/skills/senior-frontend/references/react_patterns.md",
+    "My Setup/Agentic Skills And Rules/skills/senior-frontend/references/nextjs_optimization_guide.md",
+    "My Setup/Agentic Skills And Rules/skills/senior-frontend/references/interactive-portfolio.md",
+    "My Setup/Agentic Skills And Rules/skills/senior-frontend/references/frontend_best_practices.md",
+    "My Setup/Agentic Skills And Rules/skills/senior-frontend/references/frontend-testing.md",
+    "My Setup/Agentic Skills And Rules/skills/senior-frontend/references/build-tools.md",
+    "My Setup/Agentic Skills And Rules/skills/senior-frontend/references/browser-web-apis.md",
+    "My Setup/Agentic Skills And Rules/skills/security-master/references/security-review-checklist.md",
+    "My Setup/Agentic Skills And Rules/skills/security-master/references/nextjs-security-patterns.md",
+    "Untitled.canvas"
+  ]
+}
