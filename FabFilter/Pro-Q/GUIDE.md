@@ -238,7 +238,7 @@ In-ear monitors go directly into your ear canal, forming a sealed air chamber me
 ### Single Dynamic Driver vs. Multi-Driver IEMs
 
 - **Single Dynamic Driver:** One physical speaker diaphragm reproduces everything from 30 Hz sub-rumble to 15,000 Hz cymbal shimmer. Applying an extreme +13 dB sub-bass boost makes that single diaphragm move violently, which can slightly blur delicate vocals (intermodulation distortion). Single-driver gear sounds best with moderate, controlled bass boosts.
-- **Multi-Driver Systems (e.g. Dedicated Bass Woofers):** Multi-driver IEMs (like the dual-driver KZ Castor Pro Bass Edition) have a dedicated speaker for deep sub-bass and a separate speaker for vocals and highs. Because vocals are physically isolated from bass vibrations, you can boost sub-bass to massive levels (+13 dB) while vocals stay 100% crystal clear.
+- **Multi-Driver Systems (e.g. Dedicated Bass Woofers):** Multi-driver IEMs (like the dual-driver KZ Castor Pro Improved Bass Edition) have a dedicated speaker for deep sub-bass and a separate speaker for vocals and highs. Because vocals are physically isolated from bass vibrations, you can boost sub-bass to massive levels (+13 dB) while vocals stay 100% crystal clear.
 
 ---
 

@@ -1,0 +1,137 @@
+{
+  "preamp": -11,
+  "channelSideEqEnabled": false,
+  "bands": [
+    {
+      "frequency": 32,
+      "gain": 4.3,
+      "q": 1,
+      "filterType": "LOW_SHELF",
+      "enabled": true
+    },
+    {
+      "frequency": 64,
+      "gain": 9,
+      "q": 1,
+      "filterType": "BELL",
+      "enabled": true
+    },
+    {
+      "frequency": 125,
+      "gain": 6.5,
+      "q": 1,
+      "filterType": "BELL",
+      "enabled": true
+    },
+    {
+      "frequency": 250,
+      "gain": 1.3,
+      "q": 1,
+      "filterType": "BELL",
+      "enabled": true
+    },
+    {
+      "frequency": 500,
+      "gain": -2.2,
+      "q": 1,
+      "filterType": "BELL",
+      "enabled": true
+    },
+    {
+      "frequency": 1000,
+      "gain": -1.5,
+      "q": 1,
+      "filterType": "BELL",
+      "enabled": true
+    },
+    {
+      "frequency": 2000,
+      "gain": 2.3,
+      "q": 1,
+      "filterType": "BELL",
+      "enabled": true
+    },
+    {
+      "frequency": 4000,
+      "gain": 0.9,
+      "q": 1,
+      "filterType": "BELL",
+      "enabled": true
+    },
+    {
+      "frequency": 8000,
+      "gain": 1,
+      "q": 1,
+      "filterType": "BELL",
+      "enabled": true
+    },
+    {
+      "frequency": 16000,
+      "gain": 3.8,
+      "q": 1,
+      "filterType": "HIGH_SHELF",
+      "enabled": true
+    }
+  ],
+  "mbc": {
+    "enabled": false,
+    "bandCount": 3,
+    "bands": [
+      {
+        "enabled": true,
+        "cutoff": 200,
+        "attack": 1,
+        "release": 100,
+        "ratio": 2,
+        "threshold": 0,
+        "knee": 8,
+        "noiseGate": -60,
+        "expander": 1,
+        "preGain": 0,
+        "postGain": 0,
+        "range": -4
+      },
+      {
+        "enabled": true,
+        "cutoff": 700,
+        "attack": 1,
+        "release": 100,
+        "ratio": 2,
+        "threshold": 0,
+        "knee": 8,
+        "noiseGate": -60,
+        "expander": 1,
+        "preGain": 0,
+        "postGain": 0,
+        "range": -8
+      },
+      {
+        "enabled": true,
+        "cutoff": 2000,
+        "attack": 1,
+        "release": 100,
+        "ratio": 2,
+        "threshold": 0,
+        "knee": 8,
+        "noiseGate": -60,
+        "expander": 1,
+        "preGain": 0,
+        "postGain": 0,
+        "range": -6
+      }
+    ],
+    "crossovers": [
+      1000,
+      1000
+    ]
+  },
+  "limiter": {
+    "enabled": false,
+    "attack": 1,
+    "release": 60,
+    "ratio": 10,
+    "threshold": -2,
+    "postGain": 0
+  },
+  "presetName": "XBEAST (Headphones) - Punchy Bass"
+}

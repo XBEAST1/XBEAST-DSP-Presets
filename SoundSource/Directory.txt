@@ -1,3 +1,0 @@
-Paste Presets.plist In:
-
-~/Library/Application Support/SoundSource/Presets/
