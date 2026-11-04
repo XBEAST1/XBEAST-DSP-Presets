@@ -35,7 +35,7 @@ Quality10=1
 Filter1=4
 Filter10=5
 [General]
-PreAmp=-2
+PreAmp=-9
 [Speakers]
 SpeakerId0=0
 SpeakerTargets0=all

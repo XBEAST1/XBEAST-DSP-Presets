@@ -229,6 +229,43 @@
 				<key>version</key>
 				<integer>1</integer>
 			</dict>
+			<dict>
+				<key>locked</key>
+				<false/>
+				<key>name</key>
+				<string>XBEAST (Speakers) - Rich Clarity</string>
+				<key>settings</key>
+				<dict>
+					<key>band0</key>
+					<real>0.5333333333333333</real>
+					<key>band1</key>
+					<real>0.7458333333333332</real>
+					<key>band2</key>
+					<real>0.5875</real>
+					<key>band3</key>
+					<real>0.5291666666666667</real>
+					<key>band4</key>
+					<real>0.6458333333333334</real>
+					<key>band5</key>
+					<real>0.6916666666666668</real>
+					<key>band6</key>
+					<real>0.7000000000000001</real>
+					<key>band7</key>
+					<real>0.6791666666666667</real>
+					<key>band8</key>
+					<real>0.6041666666666666</real>
+					<key>band9</key>
+					<real>0.5</real>
+					<key>preamp</key>
+					<real>0.5</real>
+				</dict>
+				<key>type</key>
+				<string>SS10BandEQPreset</string>
+				<key>uuid</key>
+				<string>82B6C905-2870-4A4D-BF3A-3628636B1373</string>
+				<key>version</key>
+				<integer>1</integer>
+			</dict>
 		</array>
 		<key>type</key>
 		<string>SSPresetGroup</string>

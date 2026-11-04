@@ -13,7 +13,9 @@ A simple, plain-English guide for music lovers, audiophiles, and competitive gam
 2. [2. The Plain-English Frequency Map: What Every Range Does](#2-the-plain-english-frequency-map-what-every-range-does)
    - [Visual Sound Spectrum](#visual-sound-spectrum)
    - [The 6 Sound Zones Explained Simply](#the-6-sound-zones-explained-simply)
-3. [3. The Secret Behind the V-Shape (The Smile Curve)](#3-the-secret-behind-the-v-shape-the-smile-curve)
+3. [3. The Secret Behind the V-Shape (The Modified Audiophile W-Contour)](#3-the-secret-behind-the-v-shape-the-modified-audiophile-w-contour)
+   - [Why Generic V-Curves Sound Hollow & Harsh](#why-generic-v-curves-sound-hollow--harsh)
+   - [The Solution: The Audiophile Modified V-Shape (The "W-Contour")](#the-solution-the-audiophile-modified-v-shape-the-w-contour)
 4. [4. Hardware Matching: IEMs vs. Over-Ear Headphones](#4-hardware-matching-iems-vs-over-ear-headphones)
    - [In-Ear Monitors (IEMs) and The Ear Tip Seal](#in-ear-monitors-iems-and-the-ear-tip-seal)
    - [Over-Ear Headphones (Closed vs. Open Back)](#over-ear-headphones-closed-vs-open-back)
@@ -29,17 +31,22 @@ A simple, plain-English guide for music lovers, audiophiles, and competitive gam
    - [Should You Use Automatic Gain-Q Interaction?](#should-you-use-automatic-gain-q-interaction)
    - [The Golden Rule: Trust Your Ears Over Formulas](#the-golden-rule-trust-your-ears-over-formulas)
    - [Pro-Q Secret Shortcut: Fine Adjustment Mode by Holding Shift](#pro-q-secret-shortcut-fine-adjustment-mode-by-holding-shift)
-7. [7. Dynamic EQ: The Secret Weapon for Harsh Spikes and Boomy Drops](#7-dynamic-eq-the-secret-weapon-for-harsh-spikes-and-boomy-drops)
+7. [7. Dynamic EQ & Spectral Dynamics: The Secret Weapons for Harsh Spikes and Boomy Drops](#7-dynamic-eq--spectral-dynamics-the-secret-weapons-for-harsh-spikes-and-boomy-drops)
    - [What is Dynamic EQ and Why It Beats a Regular Static Cut](#what-is-dynamic-eq-and-why-it-beats-a-regular-static-cut)
    - [How to Set Up a Dynamic Band in Pro-Q (Interface and Screenshots)](#how-to-set-up-a-dynamic-band-in-pro-q-interface-and-screenshots)
+   - [Spectral Dynamics: Pro-Q's Surgical Laser Carving](#spectral-dynamics-pro-qs-surgical-laser-carving)
+   - [How to Set Up Spectral Dynamics in Pro-Q (Interface and Screenshots)](#how-to-set-up-spectral-dynamics-in-pro-q-interface-and-screenshots)
+   - [Processing Resolution Guide: Choosing the Right Setting](#processing-resolution-guide-choosing-the-right-setting)
+   - [Spectral Density & Spectral Tilt Explained](#spectral-density--spectral-tilt-explained)
+   - [Comparison: Static EQ vs. Dynamic EQ vs. Spectral Dynamics](#comparison-static-eq-vs-dynamic-eq-vs-spectral-dynamics)
    - [The 10-Second Solo Sweep Trick (Finding the Pain Point)](#the-10-second-solo-sweep-trick-finding-the-pain-point)
    - [Fix 1: Taming Piercing Sibilance, Plate Reverb and Cymbals (5 to 8 kHz)](#fix-1-taming-piercing-sibilance-plate-reverb-and-cymbals-5-to-8-khz)
    - [Fix 2: Taming Boomy Bass on Heavy Drops (140 to 200 Hz)](#fix-2-taming-boomy-bass-on-heavy-drops-140-to-200-hz)
-   - [Dynamic EQ Quick Settings Cheat Sheet](#dynamic-eq-quick-settings-cheat-sheet)
+   - [Dynamic & Spectral Quick Settings Cheat Sheet](#dynamic--spectral-quick-settings-cheat-sheet)
+   - [Pro-Q Master Keyboard Shortcuts (Windows vs. macOS)](#pro-q-master-keyboard-shortcuts-windows-vs-macos)
 8. [8. Live System Routing: SoundSource (Mac) and Equalizer APO (Windows)](#8-live-system-routing-soundsource-mac-and-equalizer-apo-windows)
    - [The Master Signal Chain Order](#the-master-signal-chain-order)
    - [Why Pro-Q Goes First and Pro-L 2 Goes Last](#why-pro-q-goes-first-and-pro-l-2-goes-last)
-   - [Do You Need a Separate Compressor (Pro-C 2)?](#do-you-need-a-separate-compressor-pro-c-2)
    - [Crucial Zero-Latency Settings for Gaming and Videos](#crucial-zero-latency-settings-for-gaming-and-videos)
    - [Mac Setup: SoundSource](#mac-setup-soundsource)
    - [Windows Setup: Equalizer APO and Peace](#windows-setup-equalizer-apo-and-peace)
@@ -153,65 +160,99 @@ Always keep the final signal exiting your software below 0 dB (or protected by a
 
 Sound frequency is measured in **Hertz (Hz)** and **Kilohertz (kHz)**, from deep earthquake rumble (20 Hz) up to sparkling air (20,000 Hz / 20 kHz).
 
+Rather than generic textbook theory, this map is calibrated 1:1 to the **10-band master preset architecture** used across this entire repository.
+
 ---
 
 ### Visual Sound Spectrum
 
-| Sound Zone | **SUB-BASS**<br>*(20 – 60 Hz)* | **BASS**<br>*(60 – 150 Hz)* | **MUD ZONE**<br>*(150 – 500 Hz)* | **VOCALS / MIDS**<br>*(500 Hz – 2 kHz)* | **TREBLE**<br>*(2 – 8 kHz)* | **AIR / SPARKLE**<br>*(8 – 20 kHz)* |
+| Sound Zone | **SUB-BASS**<br>*(20 – 60 Hz)* | **BASS & BODY**<br>*(60 – 250 Hz)* | **BOXINESS SCOOP**<br>*(500 Hz – 1 kHz)* | **VOCAL PRESENCE**<br>*(2 kHz)* | **TREBLE & SIBILANCE**<br>*(4 – 8 kHz)* | **AIR & SPARKLE**<br>*(16 kHz)* |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Acoustic Feel** | Chest Rumble & Vibration | Kick Thump & 808s | Cardboard / Hollow Box | Human Voice & Melody | Drum Snap & Cymbals | Open Sheen & Shimmer |
-| **Tuning Action** | **▲ BOOST** | **▲ BOOST** | **▼ SCOOP / CUT** | **— NATURAL** | **▲ BOOST** | **▲ BOOST** |
-| **Sonic Result** | Deep Physical Weight | Body Punch & Slam | Removes Mud & Haze | Clear, Intimate Vocals | Sharp Detail & Bite | Open, Wide Soundstage |
+| **Preset Bands** | **Band 1** *(32 Hz)* | **Bands 2, 3 & 4** *(64, 125, 250 Hz)* | **Bands 5 & 6** *(500 Hz, 1 kHz)* | **Band 7** *(2 kHz)* | **Bands 8 & 9** *(4 kHz, 8 kHz)* | **Band 10** *(16 kHz)* |
+| **Acoustic Feel** | Earthquake Rumble | Kick Slam, Groove & Chest Warmth | Cardboard Haze & Nasal Honk | Intimate Vocal Forwardness | Snare Snap & Cymbal Edge | Open Concert Hall Ambience |
+| **Tuning Action** | **▲ BOOST**<br>*(+2.6 to +15.0 dB)* | **▲ BOOST**<br>*(+1.3 to +20.0 dB)* | **▼ DUAL SCOOP**<br>*(-2.2 dB & -1.5 dB)* | **▲ LIFT**<br>*(+2.3 dB)* | **▲ LIFT + SPECTRAL DUCK**<br>*(+2.7 / +3 dB with -10 dB collar)* | **▲ HIGH SHELF**<br>*(+3.8 dB)* |
+| **Sonic Result** | Deep Physical Weight | Powerful Impact & Full Body | Zero Boxy Mud or Congestion | Crisp, Articulate Lead Vocals | Sharp Edge with Zero Ear Fatigue | Wide, Immersive Room Shimmer |
 
 ---
 
 ### The 6 Sound Zones Explained Simply
 
-#### 1. 20 Hz – 60 Hz: Sub-Bass (The Physical Rumble)
-- **What it feels like:** The earthquake vibration in movie theaters, the rumble that rattles car panels, and the lowest notes of an 808 bassline.
-- **How you experience it:** You feel this physically in your head, chest, and jaw as much as you hear it. Boost this to give modern music heavy physical depth.
+#### 1. 20 Hz – 60 Hz: Sub-Bass (Band 1 - The Physical Rumble)
+- **What it feels like:** The earthquake vibration in movie theaters, the lowest fundamental notes of 808s, and the physical rumble that rattles car panels and vibrates your chest and jaw.
+- **Tuning in Presets:** Boosted via a smooth Low Shelf at 32 Hz (`+2.6 dB` on Balanced up to `+15.0 dB` on Extreme Sub-Bass) to give modern tracks deep physical foundation without muddying the upper octaves. *(Left flat at 0.0 dB for miniature laptop speakers).*
 
-#### 2. 60 Hz – 150 Hz: Bass Punch (The Chest Thump)
-- **What it feels like:** The punch of a kick drum beater and the rhythmic drive of an electric bass guitar.
-- **Role:** Gives music its groove and physical energy. Boosting here makes beats hit hard and punchy.
+#### 2. 60 Hz – 250 Hz: Bass Core & Warm Body (Bands 2, 3 & 4 - The Rhythm & Weight)
+- **What it feels like:** The punchy crack of kick drums (64 Hz), the driving groove of electric basslines (125 Hz), and the resonant chest warmth of male vocals and acoustic guitars (250 Hz).
+- **Tuning in Presets:** Boosted with high impact at 64 Hz and 125 Hz. Crucially, **Band 4 (250 Hz) is boosted by `+1.3 dB`**—retaining the warm, full-bodied resonance of instruments rather than scooping it out and leaving the sound thin or hollow.
 
-#### 3. 150 Hz – 500 Hz: The Mud & Cardboard Zone (The Clean-Up Window)
-- **What it sounds like:** Speaking with your head inside an empty cardboard box.
-- **Why it matters:** Vocals, guitars, keyboards, and bass harmonics all pile up here. If this range is too loud, the song sounds muffled and congested. Scooping this range down by **-2 dB to -3 dB** cleans up the haze and makes everything sound high-end.
+#### 3. 500 Hz – 1 kHz: Boxiness & Nasal Honk (Bands 5 & 6 - The Surgical Clean-Up)
+- **What it sounds like:** Speaking through a hollow cardboard box (500 Hz) or talking with your nose pinched like a megaphone (1 kHz).
+- **Tuning in Presets:** This is where muddy harmonic buildup occurs. Instead of a clumsy broad cut, the presets use a **surgical dual scoop**: `-2.2 dB` at 500 Hz to eliminate boxiness, and `-1.5 dB` at 1 kHz to stop harsh nasal honk. This cleans the soundstage completely so massive bass never clouds the music.
 
-#### 4. 500 Hz – 2 kHz: Vocals & Melodic Presence (The Vocal Core)
-- **What it sounds like:** The natural body of the human voice and acoustic instruments.
-- **Role:** Human ears are most sensitive here. Keep this natural and balanced so singers sound human and intimate without becoming honky or harsh.
+#### 4. 2 kHz: Vocal Core & Articulation (Band 7 - The Forward Stage)
+- **What it sounds like:** The clarity, intimacy, and edge of lead vocals and melodic lead instruments.
+- **Tuning in Presets:** Boosted with a dedicated `+2.3 dB` presence lift. This pulls the lead singer out from behind the heavy bassline, placing them directly center-stage in front of your ears.
 
-#### 5. 2 kHz – 8 kHz: Treble Detail & Snare Snap (Clarity & Definition)
-- **What it sounds like:** The sharp snap of a snare drum, acoustic guitar pick clicks, and vocal consonants ("s", "t", "k").
-- **Role:** Adds articulation and excitement. A gentle lift brings instruments forward, while a cut here stops piercing ear fatigue.
+#### 5. 4 kHz – 8 kHz: Lower & Upper Treble (Bands 8 & 9 - Detail, Snap & Sibilance Control)
+- **What it sounds like:** The sharp transient snap of snare drums, acoustic guitar pick attacks, cymbal edge, and vocal consonant friction ("S", "T", "Ch").
+- **Tuning in Presets (The Hybrid Secret):** Boosting this range flat creates piercing, painful ear fatigue on IEMs. Our presets apply a gentle static presence lift (`+2.7 dB` at 4 kHz, `+3.0 dB` at 8 kHz) paired with an **active Spectral Dynamic collar (ducking down to `-10.0 dB` on harsh peaks)** or safe static cuts on Tier 2 DSPs. You get vivid transient snap and detail, but sudden harsh "Sss" sounds and abrasive cymbal spikes are automatically clamped before they can hurt your ears.
 
-#### 6. 8 kHz – 20 kHz: Air & Sparkle (Open Room Extension)
-- **What it sounds like:** The shimmering tail of cymbals, the breath at the end of a vocal line, and natural room acoustics.
-- **Role:** Creates a sense of width, openness, and high fidelity, making headphones sound like an open concert hall rather than a claustrophobic box.
+#### 6. 16 kHz: Air & Sparkle (Band 10 - Open Room Extension)
+- **What it sounds like:** The high-frequency shimmer of ride cymbals, vocal breath, and natural room reflections.
+- **Tuning in Presets:** Elevated with a silky `+3.8 dB` High Shelf at 16 kHz. This opens up the stereo soundstage, transforming closed-in headphones and IEMs into a wide, airy concert hall.
 
 ---
 
-## 3. The Secret Behind the V-Shape (The Smile Curve)
+## 3. The Secret Behind the V-Shape (The Modified Audiophile W-Contour)
 
-The most popular tuning curve for modern music, gaming, and fun listening is the **V-Shape** (often called the **Smile Curve**):
+The traditional **V-Shape** (often called the **Smile Curve**) is the most popular tuning in consumer audio because it elevates deep bass for physical impact and boosts treble for clarity:
 
 ```
- BOOSTED BASS (Weight & Punch)                BOOSTED TREBLE (Air & Sparkle)
-       \                                                /
-        \                                              /
-         \                                            /
-          \                                          /
-           \─────── SCOOPED MIDS (500 Hz) ──────────/
-                     (Clean & Uncongested)
+  GENERIC V-SHAPE (The "Telephone" Hollow Trap)
+  Boosted Bass                                      Boosted Treble
+       \                                                  /
+        \                                                /
+         \                                              /
+          \                                            /
+           \──────── NAIVE MID SCOOP (Flat Cut) ──────/
+                  (Thin vocals, hollow body, harsh bite)
 ```
 
-**Why it works so well:**
-1. **Physical Energy:** Elevated bass delivers fun, punchy low-end impact.
-2. **Crystal Clarity:** Scooping out 300–600 Hz mud prevents that heavy bass from clouding the vocals.
-3. **Open Balance:** Elevated treble balances the bass weight so music never sounds dull or dark.
-4. **Exciting Experience:** Turns flat, boring, clinical sound into an engaging, dynamic performance.
+---
+
+### Why Generic V-Curves Sound Hollow & Harsh
+
+1. **The Hollow Mid Trap:** Naive EQ profiles scoop out *everything* between 200 Hz and 1 kHz indiscriminately. This guts the lower chest resonance of vocals and the physical body of snare drums, making music sound thin, recessed, and distant (like listening through a hollow plastic pipe).
+2. **The Sibilance Piercing Trap:** Blindly boosting treble between 4 kHz and 8 kHz creates razor-sharp sibilance. On in-ear monitors (IEMs), this causes painful ear fatigue within 10 to 15 minutes of listening.
+
+---
+
+### The Solution: The Audiophile Modified V-Shape (The "W-Contour")
+
+Rather than an indiscriminate scoop and unguided treble spike, this repository's presets engineer an **Audiophile Modified V-Shape**—effectively creating an intelligent **W-Contour** through the midrange and treble:
+
+```
+    BASS ENGINE                     VOCAL CONTOUR (W-SHAPE)                      AIR & SPARKLE
+  (32, 64, 125 Hz)                     (250 Hz to 2 kHz)                        (4, 8, 16 kHz)
+
+   ▲ BOOST (+2.6 to +20 dB)                                                ▲ HIGH SHELF (+3.8 dB)
+   │        \                      250 Hz             2,000 Hz             │          /
+   │         \                  Body (+1.3 dB)     Vocal (+2.3 dB)         │         /
+───┴──────────\───────────────────────▲──────────────────▲─────────────────┴────────/─── (0.0 dB)
+               \                     / \                / \               /
+                \                   /   \   500 Hz     /   \  4 & 8 kHz  /
+                 \                 /     \(-2.2 dB)   /     \ (Spectral /
+                  \_______________/       \          /       \  Tamed) /
+                                           ╰────────╯         ╰───────╯
+                                         1,000 Hz (-1.5 dB)
+```
+
+**Why the Audiophile W-Contour Sounds Superior:**
+1. **Preserved Warmth (250 Hz at `+1.3 dB`):** Vocals and instruments retain their warm acoustic body and physical presence.
+2. **Targeted Boxiness Removal (500 Hz at `-2.2 dB` & 1,000 Hz at `-1.5 dB`):** Only the muddy cardboard buildup and nasal honk are removed, leaving room for the bass to hit hard without bleeding into the mix.
+3. **Forward Vocal Clarity (2,000 Hz at `+2.3 dB`):** The singer is brought intimately forward, never lost behind massive sub-bass.
+4. **Intelligent Treble Safety (4 kHz & 8 kHz Spectral Collars):** Maximum detail and transient snap during normal passages, with instant real-time suppression when harsh sibilance or abrasive spikes occur.
+5. **Airy Concert Soundstage (16 kHz at `+3.8 dB`):** Delivers immense acoustic space and sparkle without ear fatigue.
 
 ---
 
@@ -385,21 +426,24 @@ If you adjust bands with the knobs or drag nodes in FabFilter Pro-Q, here is the
 
 > [!TIP]
 > **HOLD `SHIFT` WHILE DRAGGING ANY KNOB:**  
-> Holding the **`Shift`** key activates **Fine Adjustment Mode** in FabFilter Pro-Q.  
-> The knob moves in ultra-precise 0.1 dB gain (or 0.005 Q) increments, allowing you to land on exact numbers like `+2.30 dB` or clean `1.000 Q` effortlessly without annoying overshoot!
+> Holding the **`Shift`** key activates **Fine Adjustment Mode** in FabFilter Pro-Q (Windows & macOS).  
+> The knob moves in ultra precise 0.1 dB gain (or 0.005 Q) increments, allowing you to land on exact numbers like `+2.30 dB` or clean `1.000 Q` effortlessly without annoying overshoot!
+> 
+> - **Reset to Default (0.0 dB):** Hold **`Ctrl`** (Windows) or **`Command` (`⌘`)** (macOS) and click once on any knob or band dot.
+> - **Direct Text Entry:** Double-click any knob, slider, or readout to type the exact number (e.g. `440`, `1k`, `+2.3`).
 
 ---
 
-## 7. Dynamic EQ: The Secret Weapon for Harsh Spikes and Boomy Drops
+## 7. Dynamic EQ & Spectral Dynamics: The Secret Weapons for Harsh Spikes and Boomy Drops
 
-A frequent frustration with IEMs:
+A frequent frustration with IEMs and headphones:
 - A song sounds great, but when a loud vocal "Sss", a harsh cymbal crash, or a metallic plate reverb hits, it stabs your ears with painful sharpness.
 - Or, a song sounds warm during verses, but during a massive 808 drop, the bass booms so heavily that it muddies the entire song.
 
 If you use a **regular static EQ cut**, the entire song permanently sounds dull, muffled, or thin.
 If you use a **regular compressor**, the loud bass triggers the compressor, pumping down the volume of the whole song.
 
-**Dynamic EQ** solves this problem completely.
+**Dynamic EQ** and **Spectral Dynamics** solve this problem completely.
 
 ---
 
@@ -417,7 +461,7 @@ If you use a **regular compressor**, the loud bass triggers the compressor, pump
 
 Dynamic EQ acts like an intelligent, automated volume slider that only touches one specific frequency:
 1. **During normal music:** The band stays flat at `0.0 dB`. Your treble stays bright, open, and full of detail.
-2. **When a harsh spike hits:** Pro-Q automatically pulls down *only that exact frequency* for a split second.
+2. **When a harsh spike hits:** Pro-Q automatically pulls down *only that exact frequency zone* for a split second.
 3. **Your bass and midrange are completely untouched:** The punch stays massive, vocals stay warm, and your ears are protected from pain.
 
 ---
@@ -426,11 +470,16 @@ Dynamic EQ acts like an intelligent, automated volume slider that only touches o
 
 There are two quick ways to activate Dynamic EQ on any band:
 
-#### Method 1: The Right-Click Shortcut (Fastest)
-Right-click on any band node (colored circle) on your EQ curve, and select **Enable Dynamics** from the pop-up menu:
+#### Method 1: The Right Click Shortcut (Fastest)
+Right click on any band node (colored circle) on your EQ curve (or press **`Control + Click`** on a macOS trackpad), and select **Make Dynamic** from the pop up menu:
 
 ![Enable Dynamics Menu](screenshots/01-enable-dynamics-menu.png)  
-*Figure 1: Right-clicking a band node lets you select "Enable Dynamics" directly.*
+*Figure 1: Right clicking a band node lets you select "Make Dynamic" directly.*
+
+> [!TIP]
+> **Instant Dynamic Band Shortcut (Windows & macOS):**
+> - **Windows:** Hold **`Alt`** and double-click anywhere on the display (or yellow curve) to spawn an instant dynamic band.
+> - **macOS:** Hold **`Option` (`⌥`)** and double-click anywhere on the display (or yellow curve).
 
 #### Method 2: The Outer Dynamic Ring & Floating Panel
 Once enabled (or by hovering over the Gain knob and turning its outer collar), Pro-Q displays the green dynamic range shading and active controls:
@@ -441,19 +490,122 @@ Once enabled (or by hovering over the Gain knob and turning its outer collar), P
 #### Key Controls to Look For in Figure 2:
 1. **The Green Shaded Area (Dynamic Range):** Shows the maximum boundary that Pro-Q is allowed to duck or compress when audio gets too loud.
 2. **The Outer Dynamic Ring (Around Gain Knob):** Hover over the outer rim of the Gain knob. Click and drag **downwards** to dial in a negative dynamic range (e.g. `-4.0 dB` to `-6.0 dB`).
-3. **Static Gain Knob (Center):** Leave this at **`0.0 dB`** so the band introduces zero coloration during normal, non-peaking passages.
+3. **Static Gain Knob (Center):** Leave this at **`0.0 dB`** so the band introduces zero coloration during normal, non peaking passages.
 4. **Auto Threshold Indicator (`AUTO` / Level Meter):** Pro-Q automatically adjusts its trigger threshold to the music, compressing only when sudden harsh spikes or heavy bass drops cross the line.
 5. **The Live Moving Curve:** The colored band line dynamically dips down during loud peaks and returns to baseline (`0.0 dB`) when the sound is quiet.
+
+---
+
+### Spectral Dynamics: Pro-Q's Surgical Laser Carving
+
+While traditional Dynamic EQ is already powerful, **Spectral Dynamics** takes surgical precision to the next level:
+
+- **Traditional Dynamic EQ (Broad Blanket):** When a harsh frequency spikes inside your band, Dynamic EQ pulls down the **entire bell curve**. For example, if a piercing whistle occurs at 4,200 Hz inside a 4 kHz bell band, the entire range from 3,500 Hz to 4,800 Hz dips down together. This tames the whistle, but it briefly ducks harmless musical harmonics right next to it.
+- **Spectral Dynamics (Surgical Laser):** Instead of moving the whole curve, Pro-Q uses real time FFT analysis to break the band into dozens of narrow micro frequency bins. It tracks the exact offending needle spike and ducks **only that specific frequency** while leaving neighboring frequencies completely untouched!
+
+```
+   TRADITIONAL DYNAMIC EQ (Ducks whole bell)     SPECTRAL DYNAMICS (Surgical micro bins)
+   Gain (dB)                                     Gain (dB)
+     ▲                                             ▲
+  0  ├───\                 /───                 0  ├───┬─┬─┬───┬─┬─┬─── (Only the sharp resonant
+     │    \  Entire Band  /                            │   │ │ │   │ │ │         spikes duck down;
+ -6  │     ╰─────────────╯  (Whole range dips)    -6   │   ▼   ▼   ▼   ▼         neighboring air stays!)
+     └─────────────────────────►                   └─────────────────────────►
+```
+
+---
+
+### How to Set Up Spectral Dynamics in Pro-Q (Interface and Screenshots)
+
+#### Method 1: The Right Click Shortcut
+Right click on any band node (colored circle) in your EQ display (or press **`Control + Click`** on a macOS trackpad), and click **Make Spectral** from the pop up menu:
+
+![Make Spectral Menu](screenshots/03-enable-spectral-menu.png)  
+*Figure 3: Right clicking any band node lets you select "Make Spectral" directly.*
+
+#### Method 2: The Spectral Button (Above Gain Knob)
+Select any existing dynamic band, look at the floating panel, and click the small **Spectral icon** (shaped like vertical bars) located right at the top of the Gain and Dynamic Range knobs.
+
+> [!TIP]
+> **Instant Keyboard Shortcut (Windows & macOS):**  
+> - **Windows:** Hold **`Alt + Shift`** and click anywhere on the EQ display to instantly create a new Spectral Dynamic band in one click!
+> - **macOS:** Hold **`Option + Shift` (`⌥ + ⇧`)** and click anywhere on the EQ display.
+
+#### Spectral Dynamics in Action (Figure 4)
+
+![Active Spectral Carving](screenshots/04-spectral-active-carving.png)  
+*Figure 4: Active Spectral Dynamics in action. Notice the jagged yellow carving contour dipping surgically into the green dynamic boundary, and the bottom bar displaying the linear phase Processing Resolution selector.*
+
+#### Key Elements to Look For in Figure 4:
+1. **The Jagged Yellow Carving Line:** Notice that unlike the smooth bell in Figure 2, the live yellow line here is multi toothed and jagged. It is actively carving out resonant peaks in real time while keeping the surrounding air and body open.
+2. **The Green Dynamic Boundary (Band 8 Dynamic Range):** Sets the maximum allowable attenuation floor (set to `-8.00 dB` in Figure 4).
+3. **The Spectral Icon on the Gain Collar:** Lights up in teal right above the Gain knob, confirming that the band is operating in spectral mode rather than standard dynamic mode.
+4. **Bottom Bar Resolution Pill:** When any spectral band is active, Pro-Q automatically routes that band through linear phase processing and surfaces the **Processing Resolution** selector in the bottom panel (showing your active mode, the spectral icon, and the resolution label, e.g. `Medium`).
+
+---
+
+### Processing Resolution Guide: Choosing the Right Setting
+
+When you click the resolution selector in the bottom bar, Pro-Q opens the **Processing Resolution** menu:
+
+![Spectral Processing Resolution Menu](screenshots/05-spectral-resolution-menu.png)  
+*Figure 5: The Processing Resolution selection menu (Low, Medium, High, Very High, Maximum).*
+
+Because Spectral Dynamics relies on linear phase FFT processing, choosing the right resolution balances frequency detail against latency and pre ringing artifacts.
+
+#### 1. Why "Medium" is the Master Sweet Spot
+* **Medium (~116 ms latency / 5,120 samples):** This is FabFilter's officially recommended setting. It provides the ideal compromise between sharp low mid frequency resolution and low latency. For almost all music listening, vocal tracking, and mastering, **Medium** is the recommended default.
+
+#### 2. The Resolution Breakdown
+
+| Resolution | Latency (44.1 kHz) | Pre Ringing Risk | Best Practical Use Case |
+| :--- | :---: | :---: | :--- |
+| **Low** | ~70 ms *(3,072 samples)* | Zero | **Vocals, Guitars & Treble (Above 1 kHz).** Ideal for taming vocal sibilance ("Sss"), harsh cymbal splash, and electric guitar fizz with instantaneous attack and zero transient blur. |
+| **Medium** *(Default)* | ~116 ms *(5,120 samples)* | Near Zero | **The Universal Master Setting.** Recommended by FabFilter for full mixes, acoustic instruments, pianos, and bus processing. Cleanest all round performance. |
+| **High** | ~209 ms *(9,216 samples)* | Slight on kick drums | **Low Frequency Surgery.** Use only when running spectral processing below 250 Hz (e.g. resonant room modes or boomy acoustic guitar resonances). |
+| **Very High & Maximum** | 395 ms to 1,509 ms | High (Pre echo) | **Unavailable for Spectral.** FabFilter deliberately disables these two modes for Spectral Dynamics. At Maximum, latency balloons to over 1.5 seconds, which breaks real time dynamic tracking and introduces severe backwards pre ringing. |
+
+---
+
+### Spectral Density & Spectral Tilt Explained
+
+When you expand the band settings by clicking the **`>>`** expand button on a spectral band, Pro-Q reveals two advanced spectral dials:
+
+1. **Spectral Density Slider (Default: 50%):**
+   - Controls how selective the spectral slicing is.
+   - **Lower values (10% to 30%):** Frequency slices are broader and smoother.
+   - **Higher values (70% to 90%):** Creates ultra narrow, needle sharp frequency cuts.
+   - **Recommendation:** Keep it at **`50%`**. It is calibrated to sound transparent and natural on vocals and instruments.
+2. **Spectral Tilt Button (Default: ON):**
+   - Applies a gentle 3 dB/octave tilt to the internal analyzer spectrum, matching the natural pink noise slope of human hearing and commercial music.
+   - This ensures high frequencies (which naturally carry less physical energy than bass) trigger the spectral detector with natural sensitivity rather than being ignored.
+   - **Recommendation:** Leave it **ON**.
+
+---
+
+### Comparison: Static EQ vs. Dynamic EQ vs. Spectral Dynamics
+
+| Feature | Static EQ Cut | Dynamic EQ | Spectral Dynamics |
+| :--- | :---: | :---: | :---: |
+| **How it treats sound** | Cuts the frequency permanently | Dips the whole band on loud peaks | Carves only the exact resonant spikes |
+| **Impact on tone** | Makes sound permanently dull or thin | Transparent during quiet passages | 100% transparent; preserves surrounding harmonics |
+| **Processing type** | Zero Latency / Natural Phase | Zero Latency / Natural Phase | Linear Phase spectral FFT engine |
+| **Interface appearance** | Static colored hill | Smooth moving bell dipping down | Jagged multi toothed laser carving contour |
+| **Best used for** | Baseline tone shaping & bass boosts | Broad dynamic control & vocal de essing | Harsh resonances, cymbal bite, and surgical vocal cleanup |
 
 ---
 
 ### The 10-Second Solo Sweep Trick (Finding the Pain Point)
 
 Never guess where harsh frequencies live:
-1. Double-click around the problem area (e.g. around 6 kHz for treble harshness, or 160 Hz for mid-bass boom).
+1. Double click around the problem area (e.g. around 6 kHz for treble harshness, or 160 Hz for mid bass boom).
 2. Look at the band controls and find the small **Headphone icon** (Solo button) in the lower left corner.
 3. **Click and hold the Headphone icon:** Pro-Q automatically mutes the song and lets you hear **only that narrow frequency slice**.
-4. **Drag the node left and right:** Listen as you sweep. Find the exact spot where the sound turns into an ear-piercing whistle or a hollow boomy box.
+4. **Drag the node left and right:** Listen as you sweep. Find the exact spot where the sound turns into an ear piercing whistle or a hollow boomy box.
+   - **Sweep Frequency:** Drag left or right.
+   - **Adjust Monitor Volume:** Drag up or down while holding the headphone icon.
+   - **Adjust Solo Filter Width (Q):** Hold **`Ctrl`** (Windows) or **`Command` (`⌘`)** (macOS) while dragging, or scroll the mouse wheel.
+   - **Fine-Tune Sweep:** Hold **`Shift`** (Windows & macOS) while dragging for micro-adjustments.
 5. Release the mouse button, drag the outer dynamic ring down to **`-4.5 dB`**, and you're done!
 
 ---
@@ -464,7 +616,7 @@ Never guess where harsh frequencies live:
 - **Q (Width):** `2.5 – 3.2`
 - **Static Gain:** `0.0 dB` (flat baseline)
 - **Dynamic Range:** `-4.0 dB to -6.0 dB` (downward ducking)
-- **Result:** Music stays 100% bright and airy, but the instant an ear-piercing "Sss", splash cymbal, or bright plate reverb hits, it ducks down by 5 dB to protect your ears.
+- **Result:** Music stays 100% bright and airy, but the instant an ear piercing "Sss", splash cymbal, or bright plate reverb hits, it ducks down by 5 dB to protect your ears.
 
 ---
 
@@ -478,20 +630,42 @@ Never guess where harsh frequencies live:
 
 ---
 
-### Dynamic EQ Quick Settings Cheat Sheet
+### Dynamic & Spectral Quick Settings Cheat Sheet
 
-| Problem | Where It Lives | Filter Type | Q (Width) | Static Gain | Dynamic Range |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| **Piercing Vocal "Sss" / Sibilance** | `6,200 – 7,400 Hz` | Bell | `2.8` | `0.0 dB` | **`-4.0 to -6.0 dB`** |
-| **Harsh Plate Reverb & Metallic Cymbals** | `5,200 – 6,500 Hz` | Bell | `1.6` | `0.0 dB` | **`-3.5 to -5.0 dB`** |
-| **Bloated Mid-Bass on Heavy Drops** | `150 – 180 Hz` | Bell | `1.5` | `0.0 dB` | **`-4.5 to -6.0 dB`** |
-| **Thin Song Needing Warmth (Anti-Mud)** | `160 Hz` | Bell | `1.5` | `+1.5 dB` | **`-4.0 dB`** |
+| Problem | Where It Lives | Recommended Mode | Q (Width) | Static Gain | Dynamic Range | Optimal Resolution |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Piercing Vocal "Sss" / Sibilance** | `6,200 – 7,400 Hz` | **Spectral** | `2.8` | `0.0 dB` | **`-4.0 to -6.0 dB`** | **Low or Medium** |
+| **Harsh Plate Reverb & Cymbals** | `5,200 – 6,500 Hz` | **Spectral** | `1.6` | `0.0 dB` | **`-3.5 to -5.0 dB`** | **Medium** |
+| **Surgical Vocal Resonance / Whistle** | `2,500 – 4,500 Hz` | **Spectral** | `1.0 – 2.0` | `0.0 dB` | **`-4.0 to -8.0 dB`** | **Medium** |
+| **Bloated Mid Bass on Heavy Drops** | `150 – 180 Hz` | **Dynamic** | `1.5` | `0.0 dB` | **`-4.5 to -6.0 dB`** | Zero Latency |
+| **Thin Song Needing Warmth (Anti Mud)** | `160 Hz` | **Dynamic** | `1.5` | `+1.5 dB` | **`-4.0 dB`** | Zero Latency |
+
+---
+
+### Pro-Q Master Keyboard Shortcuts (Windows vs. macOS)
+
+| Functionality | Windows Shortcut | macOS Shortcut | What It Does |
+| :--- | :--- | :--- | :--- |
+| **Fine Adjustment** | `Shift + Drag` / `Wheel` | `Shift + Drag` / `Wheel` | Adjusts knobs, sliders, and dots in ultra-precise micro-increments (0.1 dB gain / 0.005 Q). |
+| **Reset to Default** | `Ctrl + Click` | `Command (⌘) + Click` | Instantly resets any knob, slider, or band gain to `0.0 dB` / default state. |
+| **Direct Text Entry** | `Double-Click` | `Double-Click` | Type exact values directly (`1k` = 1,000 Hz, `+2.3`, or musical pitch `'A4'`). |
+| **Context Menu** | `Right-Click` | `Right-Click` or `Control + Click` | Opens menu for filter shapes, slopes, stereo routing (L/R/M/S), dynamics, and deletion. |
+| **Create Standard Band** | `Double-Click` background | `Double-Click` background | Spawns a new band adapted to click frequency and position. |
+| **Create Dynamic Band** | `Alt + Double-Click` | `Option (⌥) + Double-Click` | Spawns a new band with dynamic range enabled immediately. |
+| **Create Spectral Band** | `Alt + Shift + Click` | `Option (⌥) + Shift + Click` | Spawns a new band in Spectral Dynamics mode in one click. |
+| **Adjust Q (Bandwidth)** | `Ctrl + Drag vertical` / `Wheel` | `Command (⌘) + Drag vertical` / `Wheel` | Narrows or widens filter bandwidth without touching frequency or gain. |
+| **Axis-Lock Movement** | `Alt + Drag` | `Option (⌥) + Drag` | Constrains dot movement strictly to horizontal (frequency) or vertical (gain). |
+| **Toggle Band Bypass** | `Alt + Click` band dot | `Option (⌥) + Click` band dot | Mutes/auditions an individual band without deleting it. |
+| **Solo / Audition Mode** | Click & hold Headphone icon | Click & hold Headphone icon | Solos the band slice; drag up/down for monitor volume, `Ctrl`/`Cmd` for bandwidth Q. |
+| **Multi-Select Bands** | `Ctrl + Click` dots / Marquee drag | `Command (⌘) + Click` dots / Marquee drag | Selects multiple bands to move, scale gain, or adjust Q together. |
+| **Delete Selected Band(s)**| `Delete` or `Backspace` | `Delete` (Backspace) | Deletes highlighted bands cleanly without renumbering or breaking DAW automation. |
+| **Lock Output Level** | Right-click Output slider | Right-click / `Control + Click` Output slider | Keeps volume fixed when auditioning different presets. |
 
 ---
 
 ## 8. Live System Routing: SoundSource (Mac) and Equalizer APO (Windows)
 
-Running FabFilter plugins live across your whole operating system gives you studio-quality sound on everything you watch, play, or listen to.
+Running FabFilter plugins live across your whole operating system gives you studio quality sound on everything you watch, play, or listen to.
 
 ---
 
@@ -505,9 +679,10 @@ Always arrange your plugins in this exact sequence:
 │ (Music, Game,│     │  Pro-Q         │     │  Pro-R 2       │     │  Pro-L 2       │     │ (Headphone   │
 │ Browser)     │     │  [Tone / EQ]   │     │  [Spatial]     │     │  [Peak Guard]  │     │  Jack / IEMs)│
 └──────────────┘     └────────────────┘     └────────────────┘     └────────────────┘     └──────────────┘
-                     • Zero Latency Mode    • Subtle Ambience      • Ceiling: -1.0dBTP
-                     • Headroom Pre-Trim    • Ducking Active       • Lookahead: 0.0 ms
-                     • Dynamic De-Essing    • Low Predelay         • Oversample: Off (1x)
+                     • Zero Latency Mode    • Subtle Ambience      • Ceiling: 0.0 to -0.1 dBTP (Listening)
+                                                                   • Ceiling: -1.0 dBTP (Mastering)
+                     • Headroom Pre-Trim    • Ducking Active       • Lookahead: 1.0 ms (Music) / 0.0 ms (Gaming)
+                     • Dynamic De-Essing    • Low Predelay         • Oversample: 4x (Music) / Off (Gaming)
 ```
 
 1. **Pro-Q First:** Shapes the tone, applies bass boosts, scoops mud, and dynamically tames harsh peaks.
@@ -520,15 +695,7 @@ Always arrange your plugins in this exact sequence:
 
 - **Equalizing after a limiter causes distortion:** If you place Pro-Q *after* Pro-L 2, any bass boost directly increases the volume *after* the limiter has clamped it, causing immediate digital clipping at your headphone jack.
 - **Cleaning energy first:** Scooping mud in Pro-Q *before* the limiter ensures Pro-L 2 reacts only to musical transients, not inaudible low-end bloat.
-- **The Ultimate Guardrail:** Pro-L 2 must sit at the very end to guarantee that no sound ever exceeds `-1.0 dBTP`.
-
----
-
-### Do You Need a Separate Compressor (Pro-C 2)?
-
-- **For Music Playback & Gaming: NO (Bypass it).** Commercial songs and games are already compressed and mastered. Adding a master compressor squashes drum punch, shrinks the soundstage, and ducks footsteps when loud explosions happen.
-- **Why Pro-Q Replaces It:** For taming harsh sibilance or boomy bass drops, Pro-Q's **Dynamic EQ** mode acts as a targeted compressor that only affects the offending frequency, leaving the rest of the song completely untouched.
-- *(Note: A dedicated compressor like Pro-C 2 is only needed for live microphone inputs in Discord/OBS, or when producing/mixing music).*
+- **The Ultimate Guardrail:** Pro-L 2 must sit at the very end to guarantee that no sound ever exceeds the ceiling.
 
 ---
 
@@ -539,10 +706,10 @@ To eliminate audio delay between video and sound:
 | Setting | Competitive Gaming | Pure Music Listening |
 | :--- | :---: | :---: |
 | **Pro-Q Processing Mode** | **Zero Latency** | Zero Latency or Natural Phase |
-| **Pro-L 2 Lookahead** | **`0.0 ms` (Zero)** | `1.0 – 1.5 ms` |
+| **Pro-L 2 Lookahead** | **`0.0 ms` (Zero)** | **`1.0 ms`** |
 | **Pro-L 2 Oversampling** | **Off (1x)** | `2x` or `4x` |
-| **Pro-L 2 True Peak** | **OFF** | **ON (`-1.0 dBTP`)** |
-| **Pro-L 2 Ceiling** | **`-1.0 dBFS`** | **`-1.0 dBTP`** |
+| **Pro-L 2 True Peak** | **OFF** | **ON** |
+| **Pro-L 2 Ceiling** | **`-0.5 dBFS`** | **`-0.1 dBTP` to `0.0 dBTP`** (or **`-1.0 dBTP`** for mastering) |
 | **Added Latency** | **0 ms (Instant)** | ~5 ms (Inaudible for music) |
 
 - **Why Turn Off Lookahead in Pro-L 2:** Lookahead buffers sound to anticipate peaks, adding 2–5 ms of latency. Setting it to `0.0 ms` allows instant, real-time limiting with zero delay.
@@ -585,7 +752,7 @@ To eliminate audio delay between video and sound:
 | **Audio delay in games or videos** | Pro-Q in Linear Phase, or Pro-L 2 Lookahead / Oversampling active. | Switch Pro-Q to **Zero Latency**, set Pro-L 2 Lookahead to **0.0 ms**, and turn Oversampling **Off (1x)**. |
 | **Crackle or static stutters** | Audio buffer underrun in Windows or Mac. | Set `audiodg.exe` to **High Priority** (Windows) or move SoundSource slider one tick toward **Reliable Playback** (Mac). |
 | **Buzzing during deep 808 bass drops** | Pro-L 2 release time is too fast (<40 ms), chopping bass waves. | Set Pro-L 2 Release to **Auto** or increase to **150 ms – 200 ms**. |
-| **Entire song ducks when bass hits** | Pro-C 2 active on playback, or Pro-L 2 gain pushed too hard. | Bypass Pro-C 2. In Pro-L 2, pull Gain down until the red meter only dips **1 to 3 dB**. |
+| **Entire song ducks when bass hits** | Pro-L 2 gain pushed too hard, or release time set too long. | In Pro-L 2, pull Gain down until the red meter only dips **1 to 3 dB**, and verify Style is set to **Modern**. |
 
 ---
 
@@ -610,4 +777,4 @@ You do not need a complex rack of 10 different plugins for great sound. This **3
 ### Companion Guides
 
 - 👉 **[Read the Full FabFilter Pro-L 2 Guide](../Pro-L/GUIDE.md)** — Simple guide to Attack, Release, Ceiling, and stopping low-end buzz.
-- 👉 **[Read the Full FabFilter Pro-R 2 Guide](../Pro-R2/GUIDE.md)** — Plain-English guide to Decay Rate EQ (Blue Curve) vs. Post EQ (Yellow Curve), 10 core dials, and practical case studies.
+- 👉 **[Read the Full FabFilter Pro-R 2 Guide](../Pro-R/GUIDE.md)** — Practical guide to Decay Rate EQ (Blue Curve) vs. Post EQ (Yellow Curve), interface controls sequenced to match the plugin, and mixing decision rules.
