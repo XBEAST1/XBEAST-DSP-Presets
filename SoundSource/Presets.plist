@@ -122,6 +122,43 @@
 				<key>locked</key>
 				<false/>
 				<key>name</key>
+				<string>XBEAST (Headphones) - Competitive Gaming</string>
+				<key>settings</key>
+				<dict>
+					<key>band0</key>
+					<real>0.35416666666666663</real>
+					<key>band1</key>
+					<real>0.4166666666666667</real>
+					<key>band2</key>
+					<real>0.5416666666666666</real>
+					<key>band3</key>
+					<real>0.5</real>
+					<key>band4</key>
+					<real>0.45</real>
+					<key>band5</key>
+					<real>0.5916666666666667</real>
+					<key>band6</key>
+					<real>0.6166666666666667</real>
+					<key>band7</key>
+					<real>0.4375</real>
+					<key>band8</key>
+					<real>0.4583333333333333</real>
+					<key>band9</key>
+					<real>0.4791666666666667</real>
+					<key>preamp</key>
+					<real>0.33333333333333337</real>
+				</dict>
+				<key>type</key>
+				<string>SS10BandEQPreset</string>
+				<key>uuid</key>
+				<string>A4EA7336-726A-47CA-B6E0-0E3E825ED703</string>
+				<key>version</key>
+				<integer>1</integer>
+			</dict>
+			<dict>
+				<key>locked</key>
+				<false/>
+				<key>name</key>
 				<string>XBEAST (IEMs) - Balanced</string>
 				<key>settings</key>
 				<dict>
@@ -226,6 +263,43 @@
 				<string>SS10BandEQPreset</string>
 				<key>uuid</key>
 				<string>EA3A4BA8-061C-4430-B9E8-36632AE6772A</string>
+				<key>version</key>
+				<integer>1</integer>
+			</dict>
+			<dict>
+				<key>locked</key>
+				<false/>
+				<key>name</key>
+				<string>XBEAST (IEMs) - Competitive Gaming</string>
+				<key>settings</key>
+				<dict>
+					<key>band0</key>
+					<real>0.3125</real>
+					<key>band1</key>
+					<real>0.3958333333333333</real>
+					<key>band2</key>
+					<real>0.5208333333333334</real>
+					<key>band3</key>
+					<real>0.5</real>
+					<key>band4</key>
+					<real>0.4375</real>
+					<key>band5</key>
+					<real>0.5833333333333334</real>
+					<key>band6</key>
+					<real>0.6166666666666667</real>
+					<key>band7</key>
+					<real>0.3958333333333333</real>
+					<key>band8</key>
+					<real>0.4083333333333333</real>
+					<key>band9</key>
+					<real>0.4583333333333333</real>
+					<key>preamp</key>
+					<real>0.33333333333333337</real>
+				</dict>
+				<key>type</key>
+				<string>SS10BandEQPreset</string>
+				<key>uuid</key>
+				<string>0CAC7259-E267-4242-B8AD-7E5FCBBAA7DC</string>
 				<key>version</key>
 				<integer>1</integer>
 			</dict>

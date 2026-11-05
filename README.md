@@ -15,10 +15,12 @@ XBEAST-DSP-Presets/
 │   ├── XBEAST (Headphones) - Punchy Bass.json
 │   ├── XBEAST (Headphones) - Heavy Bass.json
 │   ├── XBEAST (Headphones) - Extreme Sub-Bass.json
+│   ├── XBEAST (Headphones) - Competitive Gaming.json
 │   ├── XBEAST (IEMs) - Balanced.json
 │   ├── XBEAST (IEMs) - Punchy Bass.json
 │   ├── XBEAST (IEMs) - Heavy Bass.json
 │   ├── XBEAST (IEMs) - Extreme Sub-Bass.json
+│   ├── XBEAST (IEMs) - Competitive Gaming.json
 │   └── XBEAST (Speakers) - Rich Clarity.json
 │
 ├── Equalizer APO + Peace/
@@ -26,10 +28,12 @@ XBEAST-DSP-Presets/
 │   ├── XBEAST (Headphones) - Punchy Bass.peace
 │   ├── XBEAST (Headphones) - Heavy Bass.peace
 │   ├── XBEAST (Headphones) - Extreme Sub-Bass.peace
+│   ├── XBEAST (Headphones) - Competitive Gaming.peace
 │   ├── XBEAST (IEMs) - Balanced.peace
 │   ├── XBEAST (IEMs) - Punchy Bass.peace
 │   ├── XBEAST (IEMs) - Heavy Bass.peace
 │   ├── XBEAST (IEMs) - Extreme Sub-Bass.peace
+│   ├── XBEAST (IEMs) - Competitive Gaming.peace
 │   └── XBEAST (Speakers) - Rich Clarity.peace
 │
 ├── Equalizer314/
@@ -37,10 +41,12 @@ XBEAST-DSP-Presets/
 │   ├── XBEAST (Headphones) - Punchy Bass.json
 │   ├── XBEAST (Headphones) - Heavy Bass.json
 │   ├── XBEAST (Headphones) - Extreme Sub-Bass.json
+│   ├── XBEAST (Headphones) - Competitive Gaming.json
 │   ├── XBEAST (IEMs) - Balanced.json
 │   ├── XBEAST (IEMs) - Punchy Bass.json
 │   ├── XBEAST (IEMs) - Heavy Bass.json
 │   ├── XBEAST (IEMs) - Extreme Sub-Bass.json
+│   ├── XBEAST (IEMs) - Competitive Gaming.json
 │   └── XBEAST (Speakers) - Rich Clarity.json
 │
 ├── SoundSource/
@@ -53,12 +59,14 @@ XBEAST-DSP-Presets/
     │   │   │   ├── XBEAST - Balanced.ffp
     │   │   │   ├── XBEAST - Punchy Bass.ffp
     │   │   │   ├── XBEAST - Heavy Bass.ffp
-    │   │   │   └── XBEAST - Extreme Sub-Bass.ffp
+    │   │   │   ├── XBEAST - Extreme Sub-Bass.ffp
+    │   │   │   └── XBEAST - Competitive Gaming.ffp
     │   │   ├── IEMS/
     │   │   │   ├── XBEAST - Balanced.ffp
     │   │   │   ├── XBEAST - Punchy Bass.ffp
     │   │   │   ├── XBEAST - Heavy Bass.ffp
-    │   │   │   └── XBEAST - Extreme Sub-Bass.ffp
+    │   │   │   ├── XBEAST - Extreme Sub-Bass.ffp
+    │   │   │   └── XBEAST - Competitive Gaming.ffp
     │   │   └── Speakers/
     │   │       └── XBEAST - Rich Clarity.ffp
     │   ├── screenshots/
@@ -81,15 +89,15 @@ XBEAST-DSP-Presets/
 ### 1. EasyEffects (Linux)
 System-wide parametric equalization and dynamics processing for Linux via **EasyEffects** (PipeWire audio pipeline):
 - **Over-Ear Headphones Profiles (`.json`):**
-  - **`XBEAST (Headphones) - Balanced.json`**, **`Punchy Bass.json`**, **`Heavy Bass.json`**, **`Extreme Sub-Bass.json`**: Tuned with ear-cup presence offsets (`+0.2 dB` to `+2.7 dB`) to maintain crisp vocal articulation over powerful low-end excursions.
+  - **`XBEAST (Headphones) - Balanced.json`**, **`Punchy Bass.json`**, **`Heavy Bass.json`**, **`Extreme Sub-Bass.json`**, **`Competitive Gaming.json`**: Tuned with ear-cup presence offsets (`+0.2 dB` to `+2.8 dB`) to maintain crisp vocal articulation or isolate subtle footstep cues in tactical shooters.
 - **In-Ear Monitor (IEM) Profiles (`.json`):**
-  - **`XBEAST (IEMs) - Balanced.json`**, **`Punchy Bass.json`**, **`Heavy Bass.json`**, **`Extreme Sub-Bass.json`**: Calibrated for direct ear-canal insertion with protective treble tuning matching the Tier 2A master specification.
+  - **`XBEAST (IEMs) - Balanced.json`**, **`Punchy Bass.json`**, **`Heavy Bass.json`**, **`Extreme Sub-Bass.json`**, **`Competitive Gaming.json`**: Calibrated for direct ear-canal insertion with protective treble tuning matching the Tier 2A master specification.
 - **Built-in Speaker Profile (`.json`):**
   - **`XBEAST (Speakers) - Rich Clarity.json`**: Specifically voiced for laptop (MacBook) and mobile phone speakers. Adds clean mid-bass punch at 64 Hz while enhancing vocal intelligibility and presence across 500 Hz – 4 kHz without overdriving miniature speaker drivers.
 - **Technical Architecture & Signal Chain:**
   - **Chain Order:** `equalizer#0` → `limiter#0`.
   - **Filter Topology:** 10-band parametric EQ ($Q = 1.00$). Band 0 (32 Hz) is `Low-shelf`, Bands 1–8 are `Bell`, and Band 9 (16,000 Hz) is `High-shelf` (LSP dual-mono).
-  - **Headroom & Dynamic Protection:** Integrated digital preamp attenuation (`-9 dB` to `-22 dB`) paired with an active fast-response brickwall limiter (`Herm Thin` mode) to guarantee pristine transient fidelity with zero digital clipping.
+  - **Headroom & Dynamic Protection:** Integrated digital preamp attenuation (`-4 dB` to `-22 dB`) paired with an active fast-response brickwall limiter (`Herm Thin` mode) to guarantee pristine transient fidelity with zero digital clipping.
   - **Limiter Sidechain Routing (Fixing Limiter Glitches):** All presets have `external-sidechain` enabled on the limiter so it tracks EQ excursions with maximum precision. In EasyEffects, PipeWire can occasionally unbind the sidechain source when loading new presets; if the limiter ever behaves inconsistently or bugs out, open the **Limiter** settings in EasyEffects and ensure the **External Sidechain** input is explicitly routed/selected to **Equalizer** (`equalizer#0`).
 - **How to Install into EasyEffects:**
   - Copy the `.json` preset files into your EasyEffects output preset directory:
@@ -100,9 +108,9 @@ System-wide parametric equalization and dynamics processing for Linux via **Easy
 ### 2. Equalizer APO + Peace (Windows)
 System-wide parametric equalization curves for Windows (stored directly in `Equalizer APO + Peace/` for loading in Peace GUI):
 - **Over-Ear Headphones Profiles (`.peace`):**
-  - **`XBEAST (Headphones) - Balanced.peace`**, **`Punchy Bass.peace`**, **`Heavy Bass.peace`**, **`Extreme Sub-Bass.peace`**: Calibrated with ear-tuned presence offsets (`+0.2 dB` to `+2.7 dB`) and standardized mathematical headroom preamps (`-9 dB`, `-11 dB`, `-14 dB`, and `-22 dB`) to guarantee 100% clean, distortion-free sound across all drivers, DACs, and audio capture apps.
+  - **`XBEAST (Headphones) - Balanced.peace`**, **`Punchy Bass.peace`**, **`Heavy Bass.peace`**, **`Extreme Sub-Bass.peace`**, **`Competitive Gaming.peace`**: Calibrated with ear-tuned presence offsets (`+0.2 dB` to `+2.8 dB`) and standardized mathematical headroom preamps (`-4 dB`, `-9 dB`, `-11 dB`, `-14 dB`, and `-22 dB`) to guarantee 100% clean, distortion-free sound across all drivers, DACs, and audio capture apps.
 - **In-Ear Monitor (IEM) Profiles (`.peace`):**
-  - **`XBEAST (IEMs) - Balanced.peace`**, **`Punchy Bass.peace`**, **`Heavy Bass.peace`**, **`Extreme Sub-Bass.peace`**: 10-band static profiles matching the Tier 2A master specification with unified headroom preamps (`-9 dB` to `-22 dB`).
+  - **`XBEAST (IEMs) - Balanced.peace`**, **`Punchy Bass.peace`**, **`Heavy Bass.peace`**, **`Extreme Sub-Bass.peace`**, **`Competitive Gaming.peace`**: 10-band static profiles matching the Tier 2A master specification with unified headroom preamps (`-4 dB` to `-22 dB`).
 - **Built-in Speaker Profile (`.peace`):**
   - **`XBEAST (Speakers) - Rich Clarity.peace`**: Voiced for Windows laptops and desktop speakers with a `0 dB` listening preamp for maximum volume.
 - **How to Install into Peace GUI:**
@@ -135,14 +143,14 @@ If your Windows volume slider and headphone amplifier are already maxed out and 
 ### 3. Equalizer314 (Android)
 System-wide parametric equalization profiles for **Equalizer314** (open-source Android equalizer powered by Android's native `DynamicsProcessing` architecture):
 - **Over-Ear Headphones Profiles (`.json`):**
-  - **`XBEAST (Headphones) - Balanced.json`**, **`Punchy Bass.json`**, **`Heavy Bass.json`**, **`Extreme Sub-Bass.json`**: Tuned with ear-cup presence offsets (`+0.2 dB` to `+2.7 dB`) to maintain crisp vocal articulation over powerful low-end excursions.
+  - **`XBEAST (Headphones) - Balanced.json`**, **`Punchy Bass.json`**, **`Heavy Bass.json`**, **`Extreme Sub-Bass.json`**, **`Competitive Gaming.json`**: Tuned with ear-cup presence offsets (`+0.2 dB` to `+2.8 dB`) to maintain crisp vocal articulation and competitive footstep cues.
 - **In-Ear Monitor (IEM) Profiles (`.json`):**
-  - **`XBEAST (IEMs) - Balanced.json`**, **`Punchy Bass.json`**, **`Heavy Bass.json`**, **`Extreme Sub-Bass.json`**: Calibrated for direct ear-canal insertion with protective treble tuning matching the Tier 2A master specification.
+  - **`XBEAST (IEMs) - Balanced.json`**, **`Punchy Bass.json`**, **`Heavy Bass.json`**, **`Extreme Sub-Bass.json`**, **`Competitive Gaming.json`**: Calibrated for direct ear-canal insertion with protective treble tuning matching the Tier 2A master specification.
 - **Built-in Speaker Profile (`.json`):**
   - **`XBEAST (Speakers) - Rich Clarity.json`**: Specifically voiced for mobile phone speakers and Android tablets calibrated with a `0 dB` preamp for full listening loudness.
 - **Technical Specifications:**
   - **Filter Topology:** 10 parametric bands ($Q = 1.00$). Band 1 is `LOW_SHELF`, Bands 2–9 are `BELL`, and Band 10 is `HIGH_SHELF`.
-  - **Headroom Protection:** Integrated digital preamp attenuation (`-9 dB` on Balanced, `-11 dB` on Punchy Bass, `-14 dB` on Heavy Bass, and `-20 dB` on Extreme Sub-Bass) matching peak filter boosts to guarantee zero `0 dBFS` clipping across Android's audio pipeline.
+  - **Headroom Protection:** Integrated digital preamp attenuation (`-4 dB` on Competitive Gaming, `-9 dB` on Balanced, `-11 dB` on Punchy Bass, `-14 dB` on Heavy Bass, and `-20 dB` on Extreme Sub-Bass) matching peak filter boosts to guarantee zero `0 dBFS` clipping across Android's audio pipeline.
 - **How to Import into Equalizer314:**
   1. Download or copy the desired `.json` files to your Android device (e.g., your device's `Download/` folder).
   2. Launch **Equalizer314** and open the **Presets** menu (or tap the preset icon on the main interface).
@@ -150,9 +158,9 @@ System-wide parametric equalization profiles for **Equalizer314** (open-source A
 
 ### 4. SoundSource (macOS)
 System-wide audio control on macOS via Rogue Amoeba's **SoundSource**:
-- **`Presets.plist`**: Custom EQ presets file containing 7 universal 10-Band EQ profiles aligned with Tier 2 static specifications:
-  - **Over-Ear Headphones:** `XBEAST (Headphones) - Balanced`, `Punchy Bass`, and `Heavy Bass`.
-  - **In-Ear Monitors (IEMs):** `XBEAST (IEMs) - Balanced`, `Punchy Bass`, and `Heavy Bass`.
+- **`Presets.plist`**: Custom EQ presets file containing 9 universal 10-Band EQ profiles aligned with Tier 2 static specifications:
+  - **Over-Ear Headphones:** `XBEAST (Headphones) - Balanced`, `Punchy Bass`, `Heavy Bass`, and `Competitive Gaming`.
+  - **In-Ear Monitors (IEMs):** `XBEAST (IEMs) - Balanced`, `Punchy Bass`, `Heavy Bass`, and `Competitive Gaming`.
   - **Built-in Speakers:** `XBEAST (Speakers) - Rich Clarity` (specifically tuned for MacBook and laptop speakers).
   - *(Note: Extreme Sub-Bass is omitted from SoundSource as its +20 dB boost exceeds the ±12 dB maximum slider limit of the 10-Band EQ).*
 - **How to Install into SoundSource:**
@@ -247,6 +255,7 @@ The presets in this repository are structured across two dimensions: **Sound Sig
 | :--- | :--- | :--- |
 | **Everyday & Audiophile** | **`Balanced`**, **`Punchy Bass`** | Controlled sub-bass and dynamic kick-drum punch. Vocal-forward and clean across all genres. |
 | **High-Excursion Bass** | **`Heavy Bass`**, **`Extreme Sub-Bass`** | Deep sub-bass wall and infrasonic car-subwoofer rumble (+12 dB to +20 dB boost). |
+| **Tactical & Esports** | **`Competitive Gaming`** | Footstep scuff isolation (1–2 kHz lift), sub-bass concussion scoop (32–64 Hz), and anti-fatigue ear-canal protection (4 & 8 kHz cuts) across *Valorant*, *CS2*, *Apex*, and *PUBG*. |
 | **Built-in Speakers** | **`Rich Clarity`** | Voiced for MacBook and smartphone speakers. Punches 64 Hz kick body and boosts 500 Hz – 4 kHz vocal clarity while respecting small driver excursion. |
 
 ---
@@ -269,38 +278,38 @@ To ensure the best possible sound across all platforms from desktop VST hosts to
 - **Preset Locations:** Ready-to-load `.ffp` files are provided in [`presets/IEMS/`](FabFilter/Pro-Q/presets/IEMS/), [`presets/Headphones/`](FabFilter/Pro-Q/presets/Headphones/), and [`presets/Speakers/`](FabFilter/Pro-Q/presets/Speakers/).
 
 ##### Tier 1A: In-Ear Monitors (IEMs Pro-Q Reference)
-*Engineered for in-ear monitors to tame close-proximity ear-canal resonances with active spectral dynamic collars across all four profiles ($Q = 1.00$):*
+*Engineered for in-ear monitors to tame close-proximity ear-canal resonances with active spectral dynamic collars across everyday profiles and zero-latency static curves for competitive gaming ($Q = 1.00$):*
 
-| Band / Role | Frequency | Filter Shape | Q Factor | Balanced | Punchy Bass | Heavy Bass | Extreme Sub-Bass |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Output**<br>*(Headroom)* | — | **Output Trim** | — | $\mathbf{\color{#8b5cf6}-9.0\text{ dB}}$ | $\mathbf{\color{#8b5cf6}-11.0\text{ dB}}$ | $\mathbf{\color{#8b5cf6}-14.0\text{ dB}}$ | $\mathbf{\color{#8b5cf6}-22.0\text{ dB}}$ |
-| **1**<br>*(Sub-Bass)* | **32 Hz** | Low Shelf | `1.00` | $\mathbf{\color{#d97706}+2.6\text{ dB}}$ | $\mathbf{\color{#d97706}+4.3\text{ dB}}$ | $\mathbf{\color{#d97706}+12.0\text{ dB}}$ | $\mathbf{\color{#d97706}+15.0\text{ dB}}$ |
-| **2**<br>*(Bass Core)* | **64 Hz** | Peak / Bell | `1.00` | $\mathbf{\color{#d97706}+6.9\text{ dB}}$ | $\mathbf{\color{#d97706}+9.0\text{ dB}}$ | $\mathbf{\color{#d97706}+12.0\text{ dB}}$ | $\mathbf{\color{#d97706}+20.0\text{ dB}}$ |
-| **3**<br>*(Upper Bass)* | **125 Hz** | Peak / Bell | `1.00` | $\mathbf{\color{#d97706}+5.7\text{ dB}}$ | $\mathbf{\color{#d97706}+6.5\text{ dB}}$ | $\mathbf{\color{#d97706}+12.0\text{ dB}}$ | $\mathbf{\color{#d97706}+17.0\text{ dB}}$ |
-| **4**<br>*(Low Mids)* | **250 Hz** | Peak / Bell | `1.00` | `+1.3 dB` | `+1.3 dB` | `+1.3 dB` | `+1.3 dB` |
-| **5**<br>*(Mud Scoop)* | **500 Hz** | Peak / Bell | `1.00` | `-2.2 dB` | `-2.2 dB` | `-2.2 dB` | `-2.2 dB` |
-| **6**<br>*(Core Mids)* | **1,000 Hz** | Peak / Bell | `1.00` | `-1.5 dB` | `-1.5 dB` | `-1.5 dB` | `-1.5 dB` |
-| **7**<br>*(Upper Mids)* | **2,000 Hz** | Peak / Bell | `1.00` | `+2.3 dB` | `+2.3 dB` | `+2.3 dB` | `+2.3 dB` |
-| **8**<br>*(Lower Treble)* | **4,000 Hz** | Peak / Bell | `1.00` | `+2.7 dB`<br>*(Spectral Dyn: $\mathbf{\color{#0096c7}-10.0\text{ dB}}$)* | `+2.7 dB`<br>*(Spectral Dyn: $\mathbf{\color{#0096c7}-8.0\text{ dB}}$)* | `+2.7 dB`<br>*(Spectral Dyn: $\mathbf{\color{#0096c7}-4.0\text{ dB}}$)* | `+2.7 dB`<br>*(Spectral Dyn: $\mathbf{\color{#0096c7}-2.0\text{ dB}}$)* |
-| **9**<br>*(Upper Treble)* | **8,000 Hz** | Peak / Bell | `1.00` | `+3.0 dB`<br>*(Spectral Dyn: $\mathbf{\color{#0096c7}-4.5\text{ dB}}$)* | `+3.0 dB`<br>*(Spectral Dyn: $\mathbf{\color{#0096c7}-3.0\text{ dB}}$)* | `+3.0 dB`<br>*(Spectral Dyn: $\mathbf{\color{#0096c7}-1.0\text{ dB}}$)* | `+3.0 dB` |
-| **10**<br>*(Air)* | **16,000 Hz** | High Shelf | `1.00` | `+3.8 dB` | `+3.8 dB` | `+3.8 dB` | `+3.8 dB` |
+| Band / Role | Frequency | Filter Shape | Q Factor | Balanced | Punchy Bass | Heavy Bass | Extreme Sub-Bass | Competitive Gaming |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Output**<br>*(Headroom)* | — | **Output Trim** | — | $\mathbf{\color{#8b5cf6}-9.0\text{ dB}}$ | $\mathbf{\color{#8b5cf6}-11.0\text{ dB}}$ | $\mathbf{\color{#8b5cf6}-14.0\text{ dB}}$ | $\mathbf{\color{#8b5cf6}-22.0\text{ dB}}$ | $\mathbf{\color{#8b5cf6}-4.0\text{ dB}}$ |
+| **1**<br>*(Sub-Bass)* | **32 Hz** | Low Shelf | `1.00` | $\mathbf{\color{#d97706}+2.6\text{ dB}}$ | $\mathbf{\color{#d97706}+4.3\text{ dB}}$ | $\mathbf{\color{#d97706}+12.0\text{ dB}}$ | $\mathbf{\color{#d97706}+15.0\text{ dB}}$ | $\mathbf{\color{#d97706}-4.5\text{ dB}}$ |
+| **2**<br>*(Bass Core)* | **64 Hz** | Peak / Bell | `1.00` | $\mathbf{\color{#d97706}+6.9\text{ dB}}$ | $\mathbf{\color{#d97706}+9.0\text{ dB}}$ | $\mathbf{\color{#d97706}+12.0\text{ dB}}$ | $\mathbf{\color{#d97706}+20.0\text{ dB}}$ | $\mathbf{\color{#d97706}-2.5\text{ dB}}$ |
+| **3**<br>*(Upper Bass)* | **125 Hz** | Peak / Bell | `1.00` | $\mathbf{\color{#d97706}+5.7\text{ dB}}$ | $\mathbf{\color{#d97706}+6.5\text{ dB}}$ | $\mathbf{\color{#d97706}+12.0\text{ dB}}$ | $\mathbf{\color{#d97706}+17.0\text{ dB}}$ | `+0.5 dB` |
+| **4**<br>*(Low Mids)* | **250 Hz** | Peak / Bell | `1.00` | `+1.3 dB` | `+1.3 dB` | `+1.3 dB` | `+1.3 dB` | `0.0 dB` |
+| **5**<br>*(Mud Scoop)* | **500 Hz** | Peak / Bell | `1.00` | `-2.2 dB` | `-2.2 dB` | `-2.2 dB` | `-2.2 dB` | `-1.5 dB` |
+| **6**<br>*(Core Mids)* | **1,000 Hz** | Peak / Bell | `1.00` | `-1.5 dB` | `-1.5 dB` | `-1.5 dB` | `-1.5 dB` | `+2.0 dB` |
+| **7**<br>*(Upper Mids)* | **2,000 Hz** | Peak / Bell | `1.00` | `+2.3 dB` | `+2.3 dB` | `+2.3 dB` | `+2.3 dB` | `+2.8 dB` |
+| **8**<br>*(Lower Treble)* | **4,000 Hz** | Peak / Bell | `1.00` | `+2.7 dB`<br>*(Spectral Dyn: $\mathbf{\color{#0096c7}-10.0\text{ dB}}$)* | `+2.7 dB`<br>*(Spectral Dyn: $\mathbf{\color{#0096c7}-8.0\text{ dB}}$)* | `+2.7 dB`<br>*(Spectral Dyn: $\mathbf{\color{#0096c7}-4.0\text{ dB}}$)* | `+2.7 dB`<br>*(Spectral Dyn: $\mathbf{\color{#0096c7}-2.0\text{ dB}}$)* | $\mathbf{\color{#0096c7}-2.5\text{ dB}}$ |
+| **9**<br>*(Upper Treble)* | **8,000 Hz** | Peak / Bell | `1.00` | `+3.0 dB`<br>*(Spectral Dyn: $\mathbf{\color{#0096c7}-4.5\text{ dB}}$)* | `+3.0 dB`<br>*(Spectral Dyn: $\mathbf{\color{#0096c7}-3.0\text{ dB}}$)* | `+3.0 dB`<br>*(Spectral Dyn: $\mathbf{\color{#0096c7}-1.0\text{ dB}}$)* | `+3.0 dB` | $\mathbf{\color{#0096c7}-2.2\text{ dB}}$ |
+| **10**<br>*(Air)* | **16,000 Hz** | High Shelf | `1.00` | `+3.8 dB` | `+3.8 dB` | `+3.8 dB` | `+3.8 dB` | `-1.0 dB` |
 
 ##### Tier 1B: Over-Ear Headphones (Headphones Pro-Q Reference)
-*Engineered for over-ear headphones where earcups naturally diffuse treble. Features gentle spectral dynamic ducking on Balanced and Punchy Bass, and pure static treble on Heavy and Extreme Sub-Bass ($Q = 1.00$):*
+*Engineered for over-ear headphones where earcups naturally diffuse treble. Features gentle spectral dynamic ducking on Balanced and Punchy Bass, pure static treble on Heavy/Extreme Sub-Bass, and protective cuts on Competitive Gaming ($Q = 1.00$):*
 
-|        Band / Role         |   Frequency   |  Filter Shape   | Q Factor |                            Balanced                            |                          Punchy Bass                           |                Heavy Bass                 |             Extreme Sub-Bass              |
-| :------------------------: | :-----------: | :-------------: | :------: | :------------------------------------------------------------: | :------------------------------------------------------------: | :---------------------------------------: | :---------------------------------------: |
-| **Output**<br>*(Headroom)* |       —       | **Output Trim** |    —     |            $\mathbf{\color{#8b5cf6}-9.0\text{ dB}}$            |           $\mathbf{\color{#8b5cf6}-11.0\text{ dB}}$            | $\mathbf{\color{#8b5cf6}-14.0\text{ dB}}$ | $\mathbf{\color{#8b5cf6}-22.0\text{ dB}}$ |
-|   **1**<br>*(Sub-Bass)*    |   **32 Hz**   |    Low Shelf    |  `1.00`  |            $\mathbf{\color{#d97706}+2.6\text{ dB}}$            |            $\mathbf{\color{#d97706}+4.3\text{ dB}}$            | $\mathbf{\color{#d97706}+12.0\text{ dB}}$ | $\mathbf{\color{#d97706}+15.0\text{ dB}}$ |
-|   **2**<br>*(Bass Core)*   |   **64 Hz**   |   Peak / Bell   |  `1.00`  |            $\mathbf{\color{#d97706}+6.9\text{ dB}}$            |            $\mathbf{\color{#d97706}+9.0\text{ dB}}$            | $\mathbf{\color{#d97706}+12.0\text{ dB}}$ | $\mathbf{\color{#d97706}+20.0\text{ dB}}$ |
-|  **3**<br>*(Upper Bass)*   |  **125 Hz**   |   Peak / Bell   |  `1.00`  |            $\mathbf{\color{#d97706}+5.7\text{ dB}}$            |            $\mathbf{\color{#d97706}+6.5\text{ dB}}$            | $\mathbf{\color{#d97706}+12.0\text{ dB}}$ | $\mathbf{\color{#d97706}+17.0\text{ dB}}$ |
-|   **4**<br>*(Low Mids)*    |  **250 Hz**   |   Peak / Bell   |  `1.00`  |                           `+1.3 dB`                            |                           `+1.3 dB`                            |                 `+1.3 dB`                 |                 `+1.3 dB`                 |
-|   **5**<br>*(Mud Scoop)*   |  **500 Hz**   |   Peak / Bell   |  `1.00`  |                           `-2.2 dB`                            |                           `-2.2 dB`                            |                 `-2.2 dB`                 |                 `-2.2 dB`                 |
-|   **6**<br>*(Core Mids)*   | **1,000 Hz**  |   Peak / Bell   |  `1.00`  |                           `-1.5 dB`                            |                           `-1.5 dB`                            |                 `-1.5 dB`                 |                 `-1.5 dB`                 |
-|  **7**<br>*(Upper Mids)*   | **2,000 Hz**  |   Peak / Bell   |  `1.00`  |                           `+2.3 dB`                            |                           `+2.3 dB`                            |                 `+2.3 dB`                 |                 `+2.3 dB`                 |
-| **8**<br>*(Lower Treble)*  | **4,000 Hz**  |   Peak / Bell   |  `1.00`  | `+2.7 dB`<br>*(Spectral Dyn: $\mathbf{\color{#0096c7}-7.0\text{ dB}}$)* | `+2.7 dB`<br>*(Spectral Dyn: $\mathbf{\color{#0096c7}-5.0\text{ dB}}$)* |                 `+2.7 dB`                 |                 `+2.7 dB`                 |
-| **9**<br>*(Upper Treble)*  | **8,000 Hz**  |   Peak / Bell   |  `1.00`  | `+3.0 dB`<br>*(Spectral Dyn: $\mathbf{\color{#0096c7}-3.0\text{ dB}}$)* | `+3.0 dB`<br>*(Spectral Dyn: $\mathbf{\color{#0096c7}-3.0\text{ dB}}$)* |                 `+3.0 dB`                 |                 `+3.0 dB`                 |
-|     **10**<br>*(Air)*      | **16,000 Hz** |   High Shelf    |  `1.00`  |                           `+3.8 dB`                            |                           `+3.8 dB`                            |                 `+3.8 dB`                 |                 `+3.8 dB`                 |
+|        Band / Role         |   Frequency   |  Filter Shape   | Q Factor |                            Balanced                            |                          Punchy Bass                           |                Heavy Bass                 |             Extreme Sub-Bass              |            Competitive Gaming             |
+| :------------------------: | :-----------: | :-------------: | :------: | :------------------------------------------------------------: | :------------------------------------------------------------: | :---------------------------------------: | :---------------------------------------: | :---------------------------------------: |
+| **Output**<br>*(Headroom)* |       —       | **Output Trim** |    —     |            $\mathbf{\color{#8b5cf6}-9.0\text{ dB}}$            |           $\mathbf{\color{#8b5cf6}-11.0\text{ dB}}$            | $\mathbf{\color{#8b5cf6}-14.0\text{ dB}}$ | $\mathbf{\color{#8b5cf6}-22.0\text{ dB}}$ | $\mathbf{\color{#8b5cf6}-4.0\text{ dB}}$  |
+|   **1**<br>*(Sub-Bass)*    |   **32 Hz**   |    Low Shelf    |  `1.00`  |            $\mathbf{\color{#d97706}+2.6\text{ dB}}$            |            $\mathbf{\color{#d97706}+4.3\text{ dB}}$            | $\mathbf{\color{#d97706}+12.0\text{ dB}}$ | $\mathbf{\color{#d97706}+15.0\text{ dB}}$ | $\mathbf{\color{#d97706}-3.5\text{ dB}}$  |
+|   **2**<br>*(Bass Core)*   |   **64 Hz**   |   Peak / Bell   |  `1.00`  |            $\mathbf{\color{#d97706}+6.9\text{ dB}}$            |            $\mathbf{\color{#d97706}+9.0\text{ dB}}$            | $\mathbf{\color{#d97706}+12.0\text{ dB}}$ | $\mathbf{\color{#d97706}+20.0\text{ dB}}$ | $\mathbf{\color{#d97706}-2.0\text{ dB}}$  |
+|  **3**<br>*(Upper Bass)*   |  **125 Hz**   |   Peak / Bell   |  `1.00`  |            $\mathbf{\color{#d97706}+5.7\text{ dB}}$            |            $\mathbf{\color{#d97706}+6.5\text{ dB}}$            | $\mathbf{\color{#d97706}+12.0\text{ dB}}$ | $\mathbf{\color{#d97706}+17.0\text{ dB}}$ |                 `+1.0 dB`                 |
+|   **4**<br>*(Low Mids)*    |  **250 Hz**   |   Peak / Bell   |  `1.00`  |                           `+1.3 dB`                            |                           `+1.3 dB`                            |                 `+1.3 dB`                 |                 `+1.3 dB`                 |                 `0.0 dB`                  |
+|   **5**<br>*(Mud Scoop)*   |  **500 Hz**   |   Peak / Bell   |  `1.00`  |                           `-2.2 dB`                            |                           `-2.2 dB`                            |                 `-2.2 dB`                 |                 `-2.2 dB`                 |                 `-1.2 dB`                 |
+|   **6**<br>*(Core Mids)*   | **1,000 Hz**  |   Peak / Bell   |  `1.00`  |                           `-1.5 dB`                            |                           `-1.5 dB`                            |                 `-1.5 dB`                 |                 `-1.5 dB`                 |                 `+2.2 dB`                 |
+|  **7**<br>*(Upper Mids)*   | **2,000 Hz**  |   Peak / Bell   |  `1.00`  |                           `+2.3 dB`                            |                           `+2.3 dB`                            |                 `+2.3 dB`                 |                 `+2.3 dB`                 |                 `+2.8 dB`                 |
+| **8**<br>*(Lower Treble)*  | **4,000 Hz**  |   Peak / Bell   |  `1.00`  | `+2.7 dB`<br>*(Spectral Dyn: $\mathbf{\color{#0096c7}-7.0\text{ dB}}$)* | `+2.7 dB`<br>*(Spectral Dyn: $\mathbf{\color{#0096c7}-5.0\text{ dB}}$)* |                 `+2.7 dB`                 |                 `+2.7 dB`                 | $\mathbf{\color{#0096c7}-1.5\text{ dB}}$  |
+| **9**<br>*(Upper Treble)*  | **8,000 Hz**  |   Peak / Bell   |  `1.00`  | `+3.0 dB`<br>*(Spectral Dyn: $\mathbf{\color{#0096c7}-3.0\text{ dB}}$)* | `+3.0 dB`<br>*(Spectral Dyn: $\mathbf{\color{#0096c7}-3.0\text{ dB}}$)* |                 `+3.0 dB`                 |                 `+3.0 dB`                 | $\mathbf{\color{#0096c7}-1.0\text{ dB}}$  |
+|     **10**<br>*(Air)*      | **16,000 Hz** |   High Shelf    |  `1.00`  |                           `+3.8 dB`                            |                           `+3.8 dB`                            |                 `+3.8 dB`                 |                 `+3.8 dB`                 |                 `-0.5 dB`                 |
 
 - **Spectral Dynamic Range Mechanics (Bands 8 & 9):**
   - **Why Spectral Dynamics:** Traditional dynamic EQ pulls down the whole bell curve as a single unit when triggered. Pro-Q's **Spectral Mode** breaks the band down into hundreds of micro-frequency bins, only reducing the exact piercing harmonic (like a harsh vocal whistle or cymbal spike) while leaving adjacent frequencies untouched for unmatched clarity.
@@ -335,38 +344,38 @@ To ensure the best possible sound across all platforms from desktop VST hosts to
 - **Universal 10-Band Static Configuration Tables:** To inspect what is inside the preset files, or to manually enter them into any standalone equalizer app or hardware DSP (such as **Equalizer314**, **Qudelix-5K**, **Poweramp Equalizer**, **Wavelet**, **WiiM Home**, or **Moondrop Link**), use the reference tables below. All bands use a universally compatible **$Q = 1.00$**:
 
 ##### Tier 2A: In-Ear Monitors (IEMs Static Reference)
-*Calibrated for in-ear monitors with protective cuts on lighter profiles to prevent ear-canal fatigue ($Q = 1.00$):*
+*Calibrated for in-ear monitors with protective cuts on lighter profiles and competitive gaming to prevent ear-canal fatigue ($Q = 1.00$):*
 
-| Band / Role | Frequency | Filter Shape | Q Factor | Balanced | Punchy Bass | Heavy Bass | Extreme Sub-Bass |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Preamp**<br>*(Headroom)* | — | **Digital Preamp** | — | $\mathbf{\color{#8b5cf6}-9.0\text{ dB}}$ | $\mathbf{\color{#8b5cf6}-11.0\text{ dB}}$ | $\mathbf{\color{#8b5cf6}-14.0\text{ dB}}$ | $\mathbf{\color{#8b5cf6}-22.0\text{ dB}}$ |
-| **1**<br>*(Sub-Bass)* | **32 Hz** | Low Shelf | `1.00` | $\mathbf{\color{#d97706}+2.6\text{ dB}}$ | $\mathbf{\color{#d97706}+4.3\text{ dB}}$ | $\mathbf{\color{#d97706}+12.0\text{ dB}}$ | $\mathbf{\color{#d97706}+15.0\text{ dB}}$ |
-| **2**<br>*(Bass Core)* | **64 Hz** | Peak / Bell | `1.00` | $\mathbf{\color{#d97706}+6.9\text{ dB}}$ | $\mathbf{\color{#d97706}+9.0\text{ dB}}$ | $\mathbf{\color{#d97706}+12.0\text{ dB}}$ | $\mathbf{\color{#d97706}+20.0\text{ dB}}$ |
-| **3**<br>*(Upper Bass)* | **125 Hz** | Peak / Bell | `1.00` | $\mathbf{\color{#d97706}+5.7\text{ dB}}$ | $\mathbf{\color{#d97706}+6.5\text{ dB}}$ | $\mathbf{\color{#d97706}+12.0\text{ dB}}$ | $\mathbf{\color{#d97706}+17.0\text{ dB}}$ |
-| **4**<br>*(Low Mids)* | **250 Hz** | Peak / Bell | `1.00` | `+1.3 dB` | `+1.3 dB` | `+1.3 dB` | `+1.3 dB` |
-| **5**<br>*(Mud Scoop)* | **500 Hz** | Peak / Bell | `1.00` | `-2.2 dB` | `-2.2 dB` | `-2.2 dB` | `-2.2 dB` |
-| **6**<br>*(Core Mids)* | **1,000 Hz** | Peak / Bell | `1.00` | `-1.5 dB` | `-1.5 dB` | `-1.5 dB` | `-1.5 dB` |
-| **7**<br>*(Upper Mids)* | **2,000 Hz** | Peak / Bell | `1.00` | `+2.3 dB` | `+2.3 dB` | `+2.3 dB` | `+2.3 dB` |
-| **8**<br>*(Lower Treble)* | **4,000 Hz** | Peak / Bell | `1.00` | $\mathbf{\color{#0096c7}-2.6\text{ dB}}$ | $\mathbf{\color{#0096c7}-0.7\text{ dB}}$ | $\mathbf{\color{#0096c7}+1.3\text{ dB}}$ | $\mathbf{\color{#0096c7}+1.9\text{ dB}}$ |
-| **9**<br>*(Upper Treble)* | **8,000 Hz** | Peak / Bell | `1.00` | $\mathbf{\color{#0096c7}-0.8\text{ dB}}$ | $\mathbf{\color{#0096c7}-0.5\text{ dB}}$ | $\mathbf{\color{#0096c7}+1.8\text{ dB}}$ | $\mathbf{\color{#0096c7}+3.0\text{ dB}}$ |
-| **10**<br>*(Air)* | **16,000 Hz** | High Shelf | `1.00` | `+3.8 dB` | `+3.8 dB` | `+3.8 dB` | `+3.8 dB` |
+| Band / Role | Frequency | Filter Shape | Q Factor | Balanced | Punchy Bass | Heavy Bass | Extreme Sub-Bass | Competitive Gaming |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Preamp**<br>*(Headroom)* | — | **Digital Preamp** | — | $\mathbf{\color{#8b5cf6}-9.0\text{ dB}}$ | $\mathbf{\color{#8b5cf6}-11.0\text{ dB}}$ | $\mathbf{\color{#8b5cf6}-14.0\text{ dB}}$ | $\mathbf{\color{#8b5cf6}-22.0\text{ dB}}$ | $\mathbf{\color{#8b5cf6}-4.0\text{ dB}}$ |
+| **1**<br>*(Sub-Bass)* | **32 Hz** | Low Shelf | `1.00` | $\mathbf{\color{#d97706}+2.6\text{ dB}}$ | $\mathbf{\color{#d97706}+4.3\text{ dB}}$ | $\mathbf{\color{#d97706}+12.0\text{ dB}}$ | $\mathbf{\color{#d97706}+15.0\text{ dB}}$ | $\mathbf{\color{#d97706}-4.5\text{ dB}}$ |
+| **2**<br>*(Bass Core)* | **64 Hz** | Peak / Bell | `1.00` | $\mathbf{\color{#d97706}+6.9\text{ dB}}$ | $\mathbf{\color{#d97706}+9.0\text{ dB}}$ | $\mathbf{\color{#d97706}+12.0\text{ dB}}$ | $\mathbf{\color{#d97706}+20.0\text{ dB}}$ | $\mathbf{\color{#d97706}-2.5\text{ dB}}$ |
+| **3**<br>*(Upper Bass)* | **125 Hz** | Peak / Bell | `1.00` | $\mathbf{\color{#d97706}+5.7\text{ dB}}$ | $\mathbf{\color{#d97706}+6.5\text{ dB}}$ | $\mathbf{\color{#d97706}+12.0\text{ dB}}$ | $\mathbf{\color{#d97706}+17.0\text{ dB}}$ | `+0.5 dB` |
+| **4**<br>*(Low Mids)* | **250 Hz** | Peak / Bell | `1.00` | `+1.3 dB` | `+1.3 dB` | `+1.3 dB` | `+1.3 dB` | `0.0 dB` |
+| **5**<br>*(Mud Scoop)* | **500 Hz** | Peak / Bell | `1.00` | `-2.2 dB` | `-2.2 dB` | `-2.2 dB` | `-2.2 dB` | `-1.5 dB` |
+| **6**<br>*(Core Mids)* | **1,000 Hz** | Peak / Bell | `1.00` | `-1.5 dB` | `-1.5 dB` | `-1.5 dB` | `-1.5 dB` | `+2.0 dB` |
+| **7**<br>*(Upper Mids)* | **2,000 Hz** | Peak / Bell | `1.00` | `+2.3 dB` | `+2.3 dB` | `+2.3 dB` | `+2.3 dB` | `+2.8 dB` |
+| **8**<br>*(Lower Treble)* | **4,000 Hz** | Peak / Bell | `1.00` | $\mathbf{\color{#0096c7}-2.6\text{ dB}}$ | $\mathbf{\color{#0096c7}-0.7\text{ dB}}$ | $\mathbf{\color{#0096c7}+1.3\text{ dB}}$ | $\mathbf{\color{#0096c7}+1.9\text{ dB}}$ | $\mathbf{\color{#0096c7}-2.5\text{ dB}}$ |
+| **9**<br>*(Upper Treble)* | **8,000 Hz** | Peak / Bell | `1.00` | $\mathbf{\color{#0096c7}-0.8\text{ dB}}$ | $\mathbf{\color{#0096c7}-0.5\text{ dB}}$ | $\mathbf{\color{#0096c7}+1.8\text{ dB}}$ | $\mathbf{\color{#0096c7}+3.0\text{ dB}}$ | $\mathbf{\color{#0096c7}-2.2\text{ dB}}$ |
+| **10**<br>*(Air)* | **16,000 Hz** | High Shelf | `1.00` | `+3.8 dB` | `+3.8 dB` | `+3.8 dB` | `+3.8 dB` | `-1.0 dB` |
 
 ##### Tier 2B: Over-Ear Headphones (Headphones Static Reference)
-*Calibrated for over-ear headphones with ear-tuned presence offsets (`+0.2 dB` to `+2.7 dB`) to maintain vocal crispness ($Q = 1.00$):*
+*Calibrated for over-ear headphones with ear-tuned presence offsets (`+0.2 dB` to `+2.8 dB`) to maintain vocal crispness and competitive footstep cues ($Q = 1.00$):*
 
-| Band / Role | Frequency | Filter Shape | Q Factor | Balanced | Punchy Bass | Heavy Bass | Extreme Sub-Bass |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Preamp**<br>*(Headroom)* | — | **Digital Preamp** | — | $\mathbf{\color{#8b5cf6}-9.0\text{ dB}}$ | $\mathbf{\color{#8b5cf6}-11.0\text{ dB}}$ | $\mathbf{\color{#8b5cf6}-14.0\text{ dB}}$ | $\mathbf{\color{#8b5cf6}-22.0\text{ dB}}$ |
-| **1**<br>*(Sub-Bass)* | **32 Hz** | Low Shelf | `1.00` | $\mathbf{\color{#d97706}+2.6\text{ dB}}$ | $\mathbf{\color{#d97706}+4.3\text{ dB}}$ | $\mathbf{\color{#d97706}+12.0\text{ dB}}$ | $\mathbf{\color{#d97706}+15.0\text{ dB}}$ |
-| **2**<br>*(Bass Core)* | **64 Hz** | Peak / Bell | `1.00` | $\mathbf{\color{#d97706}+6.9\text{ dB}}$ | $\mathbf{\color{#d97706}+9.0\text{ dB}}$ | $\mathbf{\color{#d97706}+12.0\text{ dB}}$ | $\mathbf{\color{#d97706}+20.0\text{ dB}}$ |
-| **3**<br>*(Upper Bass)* | **125 Hz** | Peak / Bell | `1.00` | $\mathbf{\color{#d97706}+5.7\text{ dB}}$ | $\mathbf{\color{#d97706}+6.5\text{ dB}}$ | $\mathbf{\color{#d97706}+12.0\text{ dB}}$ | $\mathbf{\color{#d97706}+17.0\text{ dB}}$ |
-| **4**<br>*(Low Mids)* | **250 Hz** | Peak / Bell | `1.00` | `+1.3 dB` | `+1.3 dB` | `+1.3 dB` | `+1.3 dB` |
-| **5**<br>*(Mud Scoop)* | **500 Hz** | Peak / Bell | `1.00` | `-2.2 dB` | `-2.2 dB` | `-2.2 dB` | `-2.2 dB` |
-| **6**<br>*(Core Mids)* | **1,000 Hz** | Peak / Bell | `1.00` | `-1.5 dB` | `-1.5 dB` | `-1.5 dB` | `-1.5 dB` |
-| **7**<br>*(Upper Mids)* | **2,000 Hz** | Peak / Bell | `1.00` | `+2.3 dB` | `+2.3 dB` | `+2.3 dB` | `+2.3 dB` |
-| **8**<br>*(Lower Treble)* | **4,000 Hz** | Peak / Bell | `1.00` | $\mathbf{\color{#0096c7}+0.2\text{ dB}}$ | $\mathbf{\color{#0096c7}+0.9\text{ dB}}$ | $\mathbf{\color{#0096c7}+2.7\text{ dB}}$ | $\mathbf{\color{#0096c7}+2.7\text{ dB}}$ |
-| **9**<br>*(Upper Treble)* | **8,000 Hz** | Peak / Bell | `1.00` | $\mathbf{\color{#0096c7}-0.2\text{ dB}}$ | $\mathbf{\color{#0096c7}+1.0\text{ dB}}$ | $\mathbf{\color{#0096c7}+3.0\text{ dB}}$ | $\mathbf{\color{#0096c7}+3.0\text{ dB}}$ |
-| **10**<br>*(Air)* | **16,000 Hz** | High Shelf | `1.00` | `+3.8 dB` | `+3.8 dB` | `+3.8 dB` | `+3.8 dB` |
+| Band / Role | Frequency | Filter Shape | Q Factor | Balanced | Punchy Bass | Heavy Bass | Extreme Sub-Bass | Competitive Gaming |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Preamp**<br>*(Headroom)* | — | **Digital Preamp** | — | $\mathbf{\color{#8b5cf6}-9.0\text{ dB}}$ | $\mathbf{\color{#8b5cf6}-11.0\text{ dB}}$ | $\mathbf{\color{#8b5cf6}-14.0\text{ dB}}$ | $\mathbf{\color{#8b5cf6}-22.0\text{ dB}}$ | $\mathbf{\color{#8b5cf6}-4.0\text{ dB}}$ |
+| **1**<br>*(Sub-Bass)* | **32 Hz** | Low Shelf | `1.00` | $\mathbf{\color{#d97706}+2.6\text{ dB}}$ | $\mathbf{\color{#d97706}+4.3\text{ dB}}$ | $\mathbf{\color{#d97706}+12.0\text{ dB}}$ | $\mathbf{\color{#d97706}+15.0\text{ dB}}$ | $\mathbf{\color{#d97706}-3.5\text{ dB}}$ |
+| **2**<br>*(Bass Core)* | **64 Hz** | Peak / Bell | `1.00` | $\mathbf{\color{#d97706}+6.9\text{ dB}}$ | $\mathbf{\color{#d97706}+9.0\text{ dB}}$ | $\mathbf{\color{#d97706}+12.0\text{ dB}}$ | $\mathbf{\color{#d97706}+20.0\text{ dB}}$ | $\mathbf{\color{#d97706}-2.0\text{ dB}}$ |
+| **3**<br>*(Upper Bass)* | **125 Hz** | Peak / Bell | `1.00` | $\mathbf{\color{#d97706}+5.7\text{ dB}}$ | $\mathbf{\color{#d97706}+6.5\text{ dB}}$ | $\mathbf{\color{#d97706}+12.0\text{ dB}}$ | $\mathbf{\color{#d97706}+17.0\text{ dB}}$ | `+1.0 dB` |
+| **4**<br>*(Low Mids)* | **250 Hz** | Peak / Bell | `1.00` | `+1.3 dB` | `+1.3 dB` | `+1.3 dB` | `+1.3 dB` | `0.0 dB` |
+| **5**<br>*(Mud Scoop)* | **500 Hz** | Peak / Bell | `1.00` | `-2.2 dB` | `-2.2 dB` | `-2.2 dB` | `-2.2 dB` | `-1.2 dB` |
+| **6**<br>*(Core Mids)* | **1,000 Hz** | Peak / Bell | `1.00` | `-1.5 dB` | `-1.5 dB` | `-1.5 dB` | `-1.5 dB` | `+2.2 dB` |
+| **7**<br>*(Upper Mids)* | **2,000 Hz** | Peak / Bell | `1.00` | `+2.3 dB` | `+2.3 dB` | `+2.3 dB` | `+2.3 dB` | `+2.8 dB` |
+| **8**<br>*(Lower Treble)* | **4,000 Hz** | Peak / Bell | `1.00` | $\mathbf{\color{#0096c7}+0.2\text{ dB}}$ | $\mathbf{\color{#0096c7}+0.9\text{ dB}}$ | $\mathbf{\color{#0096c7}+2.7\text{ dB}}$ | $\mathbf{\color{#0096c7}+2.7\text{ dB}}$ | $\mathbf{\color{#0096c7}-1.5\text{ dB}}$ |
+| **9**<br>*(Upper Treble)* | **8,000 Hz** | Peak / Bell | `1.00` | $\mathbf{\color{#0096c7}-0.2\text{ dB}}$ | $\mathbf{\color{#0096c7}+1.0\text{ dB}}$ | $\mathbf{\color{#0096c7}+3.0\text{ dB}}$ | $\mathbf{\color{#0096c7}+3.0\text{ dB}}$ | $\mathbf{\color{#0096c7}-1.0\text{ dB}}$ |
+| **10**<br>*(Air)* | **16,000 Hz** | High Shelf | `1.00` | `+3.8 dB` | `+3.8 dB` | `+3.8 dB` | `+3.8 dB` | `-0.5 dB` |
 
 ##### Tier 2C: Built-in Speakers (MacBook & Mobile Speakers Reference)
 *Calibrated specifically for laptop and smartphone speakers to extract maximum body, kick presence, and dialogue clarity without exceeding tiny speaker excursion limits ($Q = 1.00$):*
@@ -404,14 +413,14 @@ To ensure the best possible sound across all platforms from desktop VST hosts to
   - **In-Ear Monitors:** Close acoustic coupling inside the ear canal amplifies high frequencies; gentle cuts (`-2.6 dB` / `-0.8 dB`) on lighter profiles protect against fatigue.
   - **Over-Ear Headphones:** Acoustic ear-cups diffuse highs naturally; gentle boosts or neutral tuning (`+0.2 dB` / `-0.2 dB` on Balanced, `+0.9 dB` / `+1.0 dB` on Punchy Bass) preserve openness and air without harshness.
 - **Preamp Warning & Headroom Calibration:** Always apply an appropriate negative digital **Preamp** value to avoid digital clipping (0 dBFS distortion) in static DSP environments:
-  - **Unified Master Headroom (`-9.0 dB`, `-11.0 dB`, `-14.0 dB`, `-22.0 dB`):** All static DSP presets (Peace GUI, EasyEffects, Equalizer314) are unified to mathematical worst-case headroom attenuation matching peak filter boosts 1:1. This guarantees zero clipping on fully uncompressed 0 dBFS signals, prevents Windows' hidden limiter (`CAudioLimiter`) from causing dynamic pumping, and ensures that screen recordings (OBS, Discord, ShadowPlay) are 100% clean with zero buzz or crackle.
+  - **Unified Master Headroom (`-4.0 dB`, `-9.0 dB`, `-11.0 dB`, `-14.0 dB`, `-22.0 dB`):** All static DSP presets (Peace GUI, EasyEffects, Equalizer314) are unified to mathematical worst-case headroom attenuation matching peak filter boosts 1:1. This guarantees zero clipping on fully uncompressed 0 dBFS signals, prevents Windows' hidden limiter (`CAudioLimiter`) from causing dynamic pumping, and ensures that screen recordings (OBS, Discord, ShadowPlay) are 100% clean with zero buzz or crackle.
   - **Volume Compensation:** If additional volume is required for quiet music after applying headroom preamps, raise your Windows master volume or hardware amplifier first. On Windows, you can also add a toggleable Preamp block in Equalizer APO Configuration Editor (`+` $\rightarrow$ **Basic filters** $\rightarrow$ **Preamp**) to easily switch extra gain ON for listening and OFF before recording.
 
 ---
 
 ### Headphone vs. IEM vs. Speaker Tuning Differences
 - **In-Ear Monitors (`presets/IEMS/`):** Engineered for in-ear seals with active spectral dynamics (Pro-Q) and protective static treble cuts (Static DSPs) on Bands 8 and 9 to eliminate coupler sibilance and ear fatigue.
-- **Over-Ear Headphones (`presets/Headphones/`):** Engineered for physical earcup diffusion. Spectral dynamics are applied gently on everyday profiles and disabled entirely on high-excursion bass profiles, while static DSPs feature positive presence offsets (`+0.2 dB` to `+2.7 dB`) to maintain crisp vocal clarity over massive bass.
+- **Over-Ear Headphones (`presets/Headphones/`):** Engineered for physical earcup diffusion. Spectral dynamics are applied gently on everyday profiles and disabled entirely on high-excursion bass profiles, while static DSPs feature positive presence offsets (`+0.2 dB` to `+2.8 dB`) to maintain crisp vocal clarity over massive bass and articulate footstep cues.
 - **Built-in Speakers (`presets/Speakers/`):** Engineered for small transducer physics (MacBook and smartphone speakers). Bypasses non-reproducible sub-bass rumble (<30 Hz) while elevating kick body at 64 Hz and boosting the vocal core (500 Hz – 4 kHz) to cut through background noise with crystal-clear dialogue clarity in our **Rich Clarity** tuning.
 
 ---
