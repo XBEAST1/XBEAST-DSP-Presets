@@ -113,32 +113,44 @@ System-wide parametric equalization curves for Windows (stored directly in `Equa
   - **`XBEAST (IEMs) - Balanced.peace`**, **`Punchy Bass.peace`**, **`Heavy Bass.peace`**, **`Extreme Sub-Bass.peace`**, **`Competitive Gaming.peace`**: 10-band static profiles matching the Tier 2A master specification with unified headroom preamps (`-4 dB` to `-22 dB`).
 - **Built-in Speaker Profile (`.peace`):**
   - **`XBEAST (Speakers) - Rich Clarity.peace`**: Voiced for Windows laptops and desktop speakers with a `0 dB` listening preamp for maximum volume.
-- **How to Install into Peace GUI:**
-  - Copy the `.peace` files into your Equalizer APO configuration directory:
-    ```
-    C:\Program Files\EqualizerAPO\config
-    ```
-  - Open **Peace GUI**, and your profiles will be automatically available in the preset list.
+- **How to Install & Configure Equalizer APO:**
+  1. **Configurator Device Selection (Playback Only):**
+     - Open **`Configurator.exe`** (`C:\Program Files\EqualizerAPO\Configurator.exe`).
+     - Check your playback device under **Playback devices** (e.g. `Speakers - JM98MAX`).
+     - Leave **Capture devices (Microphone) UNCHECKED**.
+       > *Why:* Prevents headphone EQ curves (e.g., heavy $+12\text{ dB}$ sub-bass boosts or preamps) from muffling or distorting your mic, avoids voice-app conflicts (Discord/Krisp), and allows disabling mic "Audio Enhancements" to eliminate Windows AGC/crosstalk echo.
+  2. **Install Peace Profiles:**
+     - Copy the `.peace` files into your Equalizer APO configuration directory:
+       ```
+       C:\Program Files\EqualizerAPO\config
+       ```
+     - Open **Peace GUI**, and your profiles will be automatically available in the preset list.
+  3. **Optimal Signal Chain in Configuration Editor (`config.txt`):**
+     - Open **Configuration Editor** (`C:\Program Files\EqualizerAPO\Editor.exe`). Order your blocks top-to-bottom:
+       ```
+       [1] Device: [Playback Device]  ──►  [2] Include: peace.txt  ──►  [3] (Optional) Preamp: +6.0 dB
+       ```
+     - **Block 1 — Device Selector:** Click green **`+`** $\rightarrow$ **Control** $\rightarrow$ **Device (Select device)**. Click **Change...**, uncheck **"Select all devices"**, and select *only* your playback device (e.g. `Speakers - JM98MAX`). This locks all processing strictly to your listening output so it never affects other devices or capture streams.
+     - **Block 2 — Peace Include:** Ensure `Include: peace.txt` is present directly below the device selector.
+     - **Block 3 — (Optional) Toggleable Preamp Block:** Click green **`+`** $\rightarrow$ **Basic filters** $\rightarrow$ **Preamp (Preamplification)** and set to your desired boost (e.g. **`+6.0 dB`** or **`+8.0 dB`**).
+       - **Everyday listening:** Leave the block's power button **ON** (green) for maximum loudness.
+       - **Before recording your screen or streaming (OBS / Discord):** Click the power button **OFF** (grayed out) with one click to instantly restore clean, distortion-free headroom for your recordings!
+       - **Why this beats the Peace slider:** It never gets overwritten when switching Peace presets, and the live peak meter shows in real time if you are pushing into clipping.
 
 #### Windows "Hidden Limiter" vs. Screen Recording Distortion
 - **The Windows "Hidden Limiter" (`CAudioLimiter`):** Windows 10 and 11 feature an internal limiter (`CAudioLimiter` inside the WASAPI shared audio engine in `audiodg.exe`). When an EQ boost pushes peaks above `0 dBFS`, Windows automatically ducks the volume to prevent immediate, harsh square-wave clipping in your headphones. However, this causes **unwanted volume pumping** (vocals ducking every time heavy bass hits) and squashes dynamic punch.
 - **Why Screen Recordings & Streams Distort:** Recording applications (OBS Studio, Discord screen sharing, GeForce Experience / ShadowPlay, Xbox Game Bar, and Audacity loopback) tap into Windows' digital audio stream directly via WASAPI loopback. If your preamp is set too high (e.g. `-2 dB` instead of `-9 dB`), the digital signal exceeds 0 dBFS. While your headphones might sound acceptable due to Windows' limiter, **the screen recording captures the clipped digital stream, resulting in harsh crackling, buzz, and severe distortion on your recorded videos and streams.**
 - **Standardized Headroom Solution:** To ensure pristine recordings, crystal-clear streams, and uncompressed dynamics, all Peace presets use standardized mathematical preamps (`-9 dB` to `-22 dB`).
 
-#### How to Increase Volume if Hardware is Maxed Out
-If your Windows volume slider and headphone amplifier are already maxed out and you need extra volume strictly for listening to quiet tracks:
-
-> [!TIP]
-> **Recommended Method: Add a Toggleable Preamp Block in Equalizer APO**  
-> Rather than editing individual Peace presets, add a dedicated Preamp block directly in Equalizer APO:
-> 1. Open **Equalizer APO Configuration Editor** (`C:\Program Files\EqualizerAPO\Editor.exe`).
-> 2. Ensure `Include: peace.txt` is present in the processing list.
-> 3. Click the green **`+`** icon $\rightarrow$ **Basic filters** $\rightarrow$ **Preamp (Preamplification)**.
-> 4. Set the preamp slider to your desired boost (e.g. **`+6.0 dB`** or **`+8.0 dB`**).
-> 5. **Instant One-Click Control:**
->    - **For everyday listening:** Leave the block's power button **ON** (green) to enjoy maximum volume.
->    - **Before recording your screen or streaming (OBS / Discord):** Click the power button **OFF** (grayed out) with one click to instantly restore clean, distortion-free headroom for your recordings!
->    - **Why this beats the Peace slider:** An Equalizer APO Preamp block never gets reset when you switch Peace presets, and the live peak meter at the bottom shows you in real time if your audio is pushing into the red clipping zone.
+#### Windows Audio Settings for Audiophiles & DACs (`mmsys.cpl`)
+To achieve bit-exact playback, clean mic recording, and prevent dongle DAC crosstalk/echo (e.g., JCALLY JM98 MAX):
+- **Audio Enhancements:**
+  - **Playback (Keep Checked):** Equalizer APO operates as a Windows Audio Processing Object (APO); unchecking *"Enable audio enhancements"* disables Equalizer APO and Peace completely. To strip unwanted manufacturer DSP/compression without breaking Equalizer APO, open **`Configurator.exe`** $\rightarrow$ select your DAC $\rightarrow$ enable **Troubleshooting options** $\rightarrow$ uncheck **"Use original APO"** (Pre-mix and Post-mix).
+  - **Recording (Unchecked):** Uncheck *"Enable audio enhancements"* on your microphone to stop Windows AGC from boosting noise floor and leaking DAC crosstalk during silence.
+- **Exclusive Mode (Keep Both Checked):** Check *"Allow applications to take exclusive control"* and *"Give exclusive mode applications priority"* to allow media players (Foobar2000, Tidal) or DAWs bit-perfect WASAPI Exclusive/ASIO bypass.
+- **Spatial Sound:** Set to **Off** to avoid phase smear and preserve true stereo imaging.
+- **USB Selective Suspend (Disabled):** In `powercfg.cpl` $\rightarrow$ *Change advanced power settings* $\rightarrow$ *USB settings*, set **USB selective suspend** to **Disabled** to prevent portable DACs from dropping into idle power-saving sleep states that drop mic noise gates.
+- **Recording Hygiene:** Ensure *"Listen to this device"* is unchecked and disable unused playback devices to prevent internal loopback routing.
 
 ### 3. Equalizer314 (Android)
 System-wide parametric equalization profiles for **Equalizer314** (open-source Android equalizer powered by Android's native `DynamicsProcessing` architecture):
